@@ -1,0 +1,22 @@
+{
+  "name": "MEPHYSTO",
+  "version": "0.1.0",
+  "author": "###",
+  "description": "###",
+  "contributors": [
+    {
+      "name": "Maurice Melchers",
+      "email": "contact@mauricemelchers.nl"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-less": "~0.5.0",
+    "grunt-contrib-watch": "^0.6.0",
+    "jpegtran-bin": "0.2.0",
+    "grunt-contrib-imagemin": "^0.2.0",
+    "grunt-autoprefixer": "^0.7.2"
+  }
+}
