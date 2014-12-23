@@ -26,10 +26,8 @@ Z?MMMMMMMMMM....... MMM....7....MMMM+
                        .I.8:            
                       .  =   
 	-->
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" xmlns:fb="http://ogp.me/ns/fb#" lang="en"> <!--<![endif]-->
+<!--[if lte IE 8]>     <html class="no-js ie-legacy" lang="en" xmlns:fb="http://ogp.me/ns/fb#" ng-app> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" xmlns:fb="http://ogp.me/ns/fb#" lang="en" ng-app> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -112,24 +110,10 @@ Z?MMMMMMMMMM....... MMM....7....MMMM+
 			</header>
 		</div>
 
-		<div class="main-container">
-			<div class="main wrapper clearfix">
-				<div class="card active" id="maincard">
-					<div class="card-shadow"></div>
-					<div class="card-background"></div>
-					<div class="card-content">
-						<h1>Mephysto</h1>
-						<h2>Maurice Melchers</h2>
-						<p>	Front End Web Developer.<br>
-							<a href="work.html" class="btnLightning"><i class="fa fa-briefcase"></i>Work</a>
-							<a href="resume.html" class="btnLightning"><i class="fa fa-th-list"></i>Resume</a>
-							<a href="mailto:contact@mauricemelchers.nl" target="_blank" class="btnLightning"><i class="fa fa-envelope"></i>Contact me</a>
-						</p>
-					</div>
-				</div>
+		<div class="main-container" ng-view>
 
-			</div> <!-- #main -->
-
+      <!-- content will come here -->
+      
 		</div> <!-- #main-container -->
 
 		<div class="footer-container">
