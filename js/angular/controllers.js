@@ -4,20 +4,20 @@
 
 var mephystoControllers = angular.module('mephystoControllers', []);
 
-mephystoControllers.controller('MephystoController', ['$scope',
-  function($scope) {
-    console.log('init');
+mephystoControllers.controller('MephystoController', ['$scope', '$rootScope',
+  function($scope, $rootScope) {
+    $rootScope.state = "IDLE";
   }]);
-mephystoControllers.controller('LandingController', ['$scope',
-  function($scope) {
-    console.log('init landing');
+mephystoControllers.controller('LandingController', ['$scope', '$rootScope',
+  function($scope, $rootScope) {
+    $rootScope.state = "LANDING";
   }]);
-mephystoControllers.controller('ResumeController', ['$scope',
-  function($scope) {
-    console.log('init res');
+mephystoControllers.controller('ResumeController', ['$scope', '$rootScope',
+  function($scope, $rootScope) {
+    $rootScope.state = "RESUME";
   }]);
-mephystoControllers.controller('WorkController', ['$scope',
-  function($scope) {
-    console.log('init work');
+mephystoControllers.controller('WorkController', ['$scope', '$rootScope',
+  function($scope, $rootScope) {
+    $rootScope.state = "WORK";
   }]);
 

@@ -23,14 +23,13 @@ var MEPHYSTO = MEPHYSTO || {
     }
 	},
 	init : function(){
-		return false;
-		console.info('Hi there! Looking to check out my unminified JS or uncompiled LESS?\nCheck out http://mauricemelchers.nl/js/main.js or http://mauricemelchers.nl/css/main.less\n\nAny more questions or maybe even job offers? Mail me at contact@mauricemelchers.nl ;)'); // Hello for checking the code, you sexy beast you.
+		console.info('Hi there! Looking to check out my unminified source files? Check out my Github page on https://github.com/mephysto\n Any other questions or maybe even job offers? Mail me at contact@mauricemelchers.nl ;)'); // Hello for checking the code, you sexy beast you.
 		function checkState(name){
-			if($('body').hasClass(name)){
+			if($('body').hasClass('state-' + name)){
 				return true;
 			}
 		};
-		if(checkState('home')){
+		if(checkState('landing')){
 			// if browser doesn't support devicemotion evnts use mouse location instead. Firefox somehow supports it but is being a butt about it.
 	    if (window.DeviceMotionEvent===undefined || (navigator.userAgent.search("Firefox") >= 0) === true) {
 	    	// we can't, use mousemove instead

@@ -1851,7 +1851,7 @@ a:visited {
   -moz-animation: btnStar 150ms infinite ease;
   -o-animation: btnStar 150ms infinite ease;
 }
-.home .main-container {
+.state-landing .main-container {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -1863,7 +1863,7 @@ a:visited {
   height: 100%;
   position: relative;
 }
-.home .card {
+.state-landing .card {
   -webkit-transition: -webkit-transform 1s ease-out;
   -moz-transition: -moz-transform 1s ease-out;
   transition: transform 1s ease-out;
@@ -1886,12 +1886,12 @@ a:visited {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.home .card.active {
+.state-landing .card.active {
   -webkit-transform: translate3d(0, 0, 0px);
   -moz-transform: translate3d(0, 0, 0px);
   transform: translate3d(0, 0, 0px);
 }
-.home .card-shadow {
+.state-landing .card-shadow {
   content: "";
   width: 700px;
   height: 500px;
@@ -1905,7 +1905,7 @@ a:visited {
   -moz-transform: translate3d(0, 0, -200px);
   transform: translate3d(0, 0, -200px);
 }
-.home .card-background {
+.state-landing .card-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -1917,7 +1917,7 @@ a:visited {
   -moz-transform: translate3d(0, 0, -25px);
   transform: translate3d(0, 0, -25px);
 }
-.home .card-content {
+.state-landing .card-content {
   color: #FFFFFF;
   position: absolute;
   top: 50%;
@@ -1933,7 +1933,7 @@ a:visited {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.home .card-content h1 {
+.state-landing .card-content h1 {
   color: #FFFFFF;
   background: url(../img/build/logo-mid.png) no-repeat;
   background: url(../img/build/logo-no-bg.svg) no-repeat;
@@ -1951,7 +1951,7 @@ a:visited {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.home .card-content h1::before {
+.state-landing .card-content h1::before {
   content: "";
   width: 250px;
   height: 241px;
@@ -1963,7 +1963,7 @@ a:visited {
   background: url(../img/build/logo-triangle.svg) no-repeat;
   background-size: contain;
 }
-.home .card-content h2 {
+.state-landing .card-content h2 {
   margin: 20px 0 0 0;
   padding: 0;
   font-size: 3em;
@@ -1973,13 +1973,13 @@ a:visited {
   -moz-transform: translateZ(5px);
   transform: translateZ(5px);
 }
-.home .card-content p {
+.state-landing .card-content p {
   margin-top: 0;
   padding-left: 60px;
   font-size: 1.6em;
   text-align: right;
 }
-.home .card-content a {
+.state-landing .card-content a {
   text-align: left;
   margin-top: 13px;
   margin-left: -50px;
@@ -1998,39 +1998,39 @@ a:visited {
   -moz-transform: translateZ(0px);
   transform: translateZ(0px);
 }
-.home .card-content a:hover {
+.state-landing .card-content a:hover {
   -webkit-transform: translateZ(35px);
   -moz-transform: translateZ(35px);
   transform: translateZ(35px);
 }
-.home .card-content a i {
+.state-landing .card-content a i {
   margin-right: 0.25em;
 }
-.work .main-container {
+.state-work .main-container {
   height: 100%;
   overflow-y: scroll;
   padding: 50px 0 100px;
 }
-.work .main {
+.state-work .main {
   background: #FFFFFF;
   border-radius: 2px;
   padding: 10px 30px;
 }
-.work h1 {
+.state-work h1 {
   font-size: 3em;
   margin: 0;
 }
-.work h2 {
+.state-work h2 {
   margin: 10px 0 0 0;
   font-size: 2em;
 }
-.work h3 {
+.state-work h3 {
   font-size: 1.5em;
 }
-.work p {
+.state-work p {
   font-size: 1.5em;
 }
-.work p.name {
+.state-work p.name {
   font-family: 'Arvo', sans-serif, Helvetica, Helvetica Neue, Arial;
   font-weight: 400;
   text-align: center;
@@ -2039,7 +2039,7 @@ a:visited {
   text-transform: uppercase;
   margin: 30px 0 0 0;
 }
-.work p.title {
+.state-work p.title {
   text-align: center;
   font-size: 1.5em;
   margin-top: 0;
@@ -2047,58 +2047,58 @@ a:visited {
   color: #444;
   border-bottom: 2px solid #222222;
 }
-.work section {
+.state-work section {
   border-top: 1px solid #444444;
   padding: 15px 0;
 }
-.work section.intro {
+.state-work section.intro {
   border: none;
   padding: 15px 0;
 }
-.work section ul {
+.state-work section ul {
   padding: 0 0 0 1.75em;
   margin: 0.5em 0 0 0;
 }
-.work section ul > li {
+.state-work section ul > li {
   font-size: 1.25em;
   line-height: 1.5em;
 }
-.work section ul > li em {
+.state-work section ul > li em {
   font-size: 0.9em;
 }
-.work .text > a {
+.state-work .text > a {
   display: block;
   text-align: right;
   font-size: 1.4em;
 }
-.work .text a,
-.work .text a:visited,
-.work .text a:active {
+.state-work .text a,
+.state-work .text a:visited,
+.state-work .text a:active {
   color: #333;
   text-decoration: none;
 }
-.work .text a:hover {
+.state-work .text a:hover {
   text-decoration: underline;
 }
-.work .image {
+.state-work .image {
   text-align: right;
   padding: 15px 0 15px 15px;
 }
-.work .image img {
+.state-work .image img {
   width: 100%;
   max-width: 300px;
 }
-.work .moreprojects a {
+.state-work .moreprojects a {
   color: #333;
   text-decoration: none;
 }
-.work .moreprojects a:hover {
+.state-work .moreprojects a:hover {
   text-decoration: underline;
 }
-.resume {
+.state-resume {
   overflow: hidden;
 }
-.resume .main-container {
+.state-resume .main-container {
   height: 100%;
   overflow-y: scroll;
   padding: 50px 0 100px;
@@ -2109,7 +2109,7 @@ a:visited {
   -moz-perspective: 700px;
   perspective: 700px;
 }
-.resume .main {
+.state-resume .main {
   background: #FFFFFF;
   border-radius: 2px;
   padding: 10px 30px;
@@ -2121,23 +2121,23 @@ a:visited {
   -webkit-animation: btnEnter 2s 1 ease-out;
   padding-bottom: 50px;
 }
-.resume h1 {
+.state-resume h1 {
   font-size: 3em;
   margin: 0;
 }
-.resume h2 {
+.state-resume h2 {
   border-top: 1px solid #444444;
   padding-top: 15px;
   margin: 10px 0 0 0;
   font-size: 2em;
 }
-.resume h3 {
+.state-resume h3 {
   font-size: 1.5em;
 }
-.resume p {
+.state-resume p {
   font-size: 1.5em;
 }
-.resume p.name {
+.state-resume p.name {
   font-family: 'Arvo', sans-serif, Helvetica, Helvetica Neue, Arial;
   font-weight: 400;
   text-align: center;
@@ -2146,7 +2146,7 @@ a:visited {
   text-transform: uppercase;
   margin: 30px 0 0 0;
 }
-.resume p.title {
+.state-resume p.title {
   text-align: center;
   font-size: 1.5em;
   margin-top: 0;
@@ -2154,7 +2154,7 @@ a:visited {
   color: #444;
   border-bottom: 2px solid #222222;
 }
-.resume a.download {
+.state-resume a.download {
   position: relative;
   color: #444444;
   text-decoration: none;
@@ -2163,24 +2163,24 @@ a:visited {
   padding: 4px 8px;
   border-radius: 10px;
 }
-.resume a.download:hover {
+.state-resume a.download:hover {
   color: #222222;
 }
-.resume a.download:active {
+.state-resume a.download:active {
   top: 1px;
   left: 1px;
 }
-.resume a.download .fa {
+.state-resume a.download .fa {
   text-decoration: underline;
 }
-.resume .location {
+.state-resume .location {
   float: right;
   width: 180px;
   height: 100px;
   margin: 0 0 10px 10px;
   position: relative;
 }
-.resume .location img {
+.state-resume .location img {
   width: 180px;
   height: 100px;
   position: absolute;
@@ -2201,7 +2201,7 @@ a:visited {
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
 }
-.resume .location img + img {
+.state-resume .location img + img {
   opacity: 0;
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -2209,62 +2209,62 @@ a:visited {
   -o-filter: grayscale(0%);
   filter: none;
 }
-.resume .location:hover img + img {
+.state-resume .location:hover img + img {
   opacity: 1;
 }
-.resume section.intro ul,
-.resume section.skills ul {
+.state-resume section.intro ul,
+.state-resume section.skills ul {
   padding: 0 0 0 1.75em;
   margin: 0.5em 0 0 0;
 }
-.resume section.intro ul > li,
-.resume section.skills ul > li {
+.state-resume section.intro ul > li,
+.state-resume section.skills ul > li {
   font-size: 1.25em;
   line-height: 1.5em;
 }
-.resume section.intro ul > li em,
-.resume section.skills ul > li em {
+.state-resume section.intro ul > li em,
+.state-resume section.skills ul > li em {
   font-size: 0.9em;
 }
-.resume section.agencies > ul {
+.state-resume section.agencies > ul {
   list-style: none;
   padding: 0;
 }
-.resume section.agencies > ul > li {
+.state-resume section.agencies > ul > li {
   margin: 0 0 15px 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid #aaa;
   min-height: 116px;
 }
-.resume section.agencies > ul > li:last-child {
+.state-resume section.agencies > ul > li:last-child {
   border-bottom: none;
 }
-.resume section.agencies > ul > li h3 {
+.state-resume section.agencies > ul > li h3 {
   margin: 0 0 5px 0;
 }
-.resume section.agencies > ul > li p {
+.state-resume section.agencies > ul > li p {
   margin: 0;
 }
-.resume section.agencies > ul > li p em {
+.state-resume section.agencies > ul > li p em {
   font-size: 0.9em;
 }
-.resume section.agencies > ul > li > ul {
+.state-resume section.agencies > ul > li > ul {
   list-style: none;
   padding: 0;
   margin: 0.5em 0 0 0;
 }
-.resume section.agencies > ul > li > ul > li {
+.state-resume section.agencies > ul > li > ul > li {
   font-family: 'Fontawesome';
   font-size: 1.25em;
   line-height: 1.5em;
 }
-.resume section.agencies > ul > li > ul > li:before {
+.state-resume section.agencies > ul > li > ul > li:before {
   margin-right: 0.25em;
 }
-.resume section.agencies > ul > li > ul > li em {
+.state-resume section.agencies > ul > li > ul > li em {
   font-size: 0.9em;
 }
-.resume section.onlineprofiles a {
+.state-resume section.onlineprofiles a {
   line-height: 2em;
   text-decoration: none;
   background: #EEE;
@@ -2278,45 +2278,11 @@ a:visited {
   -o-transition: background 500ms ease-out;
   transition: background 500ms ease-out;
 }
-.resume section.onlineprofiles a:hover {
+.state-resume section.onlineprofiles a:hover {
   background: #bbb;
 }
-.resume section.onlineprofiles a i {
+.state-resume section.onlineprofiles a i {
   margin-right: 4px;
-}
-.countdown .main-container {
-  height: auto;
-  padding-top: 15%;
-}
-.countdown .main {
-  background: #FFFFFF;
-}
-.countdown .countdown-content {
-  margin: 0 20px;
-  font-size: 2.5em;
-  line-height: 1.25em;
-  text-transform: uppercase;
-}
-.countdown p.disclaimer {
-  color: #ffffff;
-  line-height: 1em;
-}
-.countdown section {
-  display: none;
-  background: #FFFFFF;
-  padding: 20px;
-}
-.countdown section h2 {
-  margin: 0;
-}
-.countdown section img {
-  float: right;
-  width: 225px;
-  height: 225px;
-  margin: 10px 0 0 10px;
-}
-.countdown section p {
-  font-size: 1.2em;
 }
 .footer-container {
   background: #000000;

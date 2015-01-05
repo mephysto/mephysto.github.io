@@ -4,11 +4,10 @@
 
 var mephystoApp = angular.module('mephystoApp', [
   'ngRoute',
-  // 'phonecatAnimations',
-
+  // 'mephystoAnimations',
   'mephystoControllers'
-  // 'phonecatFilters',
-  // 'phonecatServices'
+  // 'mephystoFilters',
+  // 'mephystoServices'
 ]);
 
 mephystoApp.config(['$routeProvider',
