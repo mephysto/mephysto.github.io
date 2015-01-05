@@ -4,7 +4,7 @@
 
 var mephystoApp = angular.module('mephystoApp', [
   'ngRoute',
-  // 'mephystoAnimations',
+  'mephystoAnimations',
   'mephystoControllers'
   // 'mephystoFilters',
   // 'mephystoServices'
