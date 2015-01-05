@@ -3,27 +3,28 @@
 /* App Module */
 
 var mephystoApp = angular.module('mephystoApp', [
-  // 'ngRoute',
+  'ngRoute',
   // 'phonecatAnimations',
 
-  // 'phonecatControllers',
+  'mephystoControllers'
   // 'phonecatFilters',
   // 'phonecatServices'
 ]);
 
-/*mephystoApp.config(['$routeProvider',
+mephystoApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/phones', {
-        templateUrl: 'partials/phone-list.html',
-        controller: 'PhoneListCtrl'
+      when('/resume', {
+        templateUrl: 'partials/resume.html',
+        controller: 'ResumeController'
       }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
+      when('/work', {
+        templateUrl: 'partials/work.html',
+        controller: 'WorkController'
       }).
       otherwise({
-        redirectTo: '/phones'
+        templateUrl: 'partials/landing.html',
+        controller: 'LandingController',
+        redirectTo: '/home'
       });
   }]);
-*/
