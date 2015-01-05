@@ -24,6 +24,6 @@ mephystoApp.config(['$routeProvider',
       otherwise({
         templateUrl: 'partials/landing.html',
         controller: 'LandingController',
-        redirectTo: '/home'
+        redirectTo: '/'
       });
   }]);
