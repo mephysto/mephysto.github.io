@@ -1,5 +1,4 @@
 "use strict";
-
 var console = console || {};
 var MEPHYSTO = MEPHYSTO || {
 	sw : 0,
@@ -24,6 +23,7 @@ var MEPHYSTO = MEPHYSTO || {
     }
 	},
 	init : function(){
+		return false;
 		console.info('Hi there! Looking to check out my unminified JS or uncompiled LESS?\nCheck out http://mauricemelchers.nl/js/main.js or http://mauricemelchers.nl/css/main.less\n\nAny more questions or maybe even job offers? Mail me at contact@mauricemelchers.nl ;)'); // Hello for checking the code, you sexy beast you.
 		function checkState(name){
 			if($('body').hasClass(name)){
