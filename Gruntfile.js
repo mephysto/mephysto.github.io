@@ -125,5 +125,7 @@ module.exports = function(grunt) {
   grunt.registerTask('watchscripts', ['uglify', 'watch:scripts']);
   // start watching for changes in image folder
   grunt.registerTask('watchimages', ['imagemin', 'watch:images']);
+  // watch everything
+  grunt.registerTask('watchall', ['default', 'watch']);
 
 };

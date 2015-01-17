@@ -1,0 +1,20 @@
+@transitionTime: 250ms;
+@AnimationTime: 250ms;
+@transition: @transitionTime linear all;
+
+.main-container.ng-enter, .main-container.ng-leave{
+  -webkit-transition: @transition;
+  transition: @transition;
+}
+.main-container.ng-enter{
+  opacity: 0;
+}
+.main-container.ng-enter-active{
+  opacity: 1;
+}
+.main-container.ng-leave{
+  opacity: 1;
+}
+.main-container.ng-leave-active {
+  opacity: 0;
+}
