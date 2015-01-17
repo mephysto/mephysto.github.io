@@ -1761,67 +1761,22 @@ h3 {
 .fa-bomb:before {
   content: "\f1e2";
 }
-.view-frame.ng-enter {
-  -webkit-animation: 0.5s fade-in;
-  -moz-animation: 0.5s fade-in;
-  -o-animation: 0.5s fade-in;
-  animation: 0.5s fade-in;
-  z-index: 100;
+.main-container.ng-enter,
+.main-container.ng-leave {
+  -webkit-transition: 250ms linear all;
+  transition: 250ms linear all;
 }
-.view-frame.ng-leave {
-  -webkit-animation: 0.5s fade-out;
-  -moz-animation: 0.5s fade-out;
-  -o-animation: 0.5s fade-out;
-  animation: 0.5s fade-out;
-  z-index: 99;
+.main-container.ng-enter {
+  opacity: 0;
 }
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.main-container.ng-enter-active {
+  opacity: 1;
 }
-@-moz-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.main-container.ng-leave {
+  opacity: 1;
 }
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-moz-keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.main-container.ng-leave-active {
+  opacity: 0;
 }
 * {
   -moz-box-sizing: border-box;
@@ -1913,7 +1868,7 @@ a:visited {
   -moz-animation: btnStar 150ms infinite ease;
   -o-animation: btnStar 150ms infinite ease;
 }
-.state-landing .main-container {
+.main-container {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -1923,9 +1878,13 @@ a:visited {
   /* Chrome, Safari, Opera  */
 
   height: 100%;
+  padding: 50px 0 100px;
   position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
 }
-.state-landing .card {
+/* LANDING */
+.landing-card {
   -webkit-transition: -webkit-transform 1s ease-out;
   -moz-transition: -moz-transform 1s ease-out;
   transition: transform 1s ease-out;
@@ -1948,12 +1907,12 @@ a:visited {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-.state-landing .card.active {
+.landing-card.active {
   -webkit-transform: translate3d(0, 0, 0px);
   -moz-transform: translate3d(0, 0, 0px);
   transform: translate3d(0, 0, 0px);
 }
-.state-landing .card-shadow {
+.landing-card-shadow {
   content: "";
   width: 700px;
   height: 500px;
@@ -1967,7 +1926,7 @@ a:visited {
   -moz-transform: translate3d(0, 0, -200px);
   transform: translate3d(0, 0, -200px);
 }
-.state-landing .card-background {
+.landing-card-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -1979,7 +1938,7 @@ a:visited {
   -moz-transform: translate3d(0, 0, -25px);
   transform: translate3d(0, 0, -25px);
 }
-.state-landing .card-content {
+.landing-card-content {
   color: #FFFFFF;
   position: absolute;
   top: 50%;
@@ -1995,7 +1954,7 @@ a:visited {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.state-landing .card-content h1 {
+.landing-card-content h1 {
   color: #FFFFFF;
   background: url(../img/build/logo-mid.png) no-repeat;
   background: url(../img/build/logo-no-bg.svg) no-repeat;
@@ -2013,7 +1972,7 @@ a:visited {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.state-landing .card-content h1::before {
+.landing-card-content h1::before {
   content: "";
   width: 250px;
   height: 241px;
@@ -2025,7 +1984,7 @@ a:visited {
   background: url(../img/build/logo-triangle.svg) no-repeat;
   background-size: contain;
 }
-.state-landing .card-content h2 {
+.landing-card-content h2 {
   margin: 20px 0 0 0;
   padding: 0;
   font-size: 3em;
@@ -2035,13 +1994,13 @@ a:visited {
   -moz-transform: translateZ(5px);
   transform: translateZ(5px);
 }
-.state-landing .card-content p {
+.landing-card-content p {
   margin-top: 0;
   padding-left: 60px;
   font-size: 1.6em;
   text-align: right;
 }
-.state-landing .card-content a {
+.landing-card-content a {
   text-align: left;
   margin-top: 13px;
   margin-left: -50px;
@@ -2060,39 +2019,35 @@ a:visited {
   -moz-transform: translateZ(0px);
   transform: translateZ(0px);
 }
-.state-landing .card-content a:hover {
+.landing-card-content a:hover {
   -webkit-transform: translateZ(35px);
   -moz-transform: translateZ(35px);
   transform: translateZ(35px);
 }
-.state-landing .card-content a i {
+.landing-card-content a i {
   margin-right: 0.25em;
 }
-.state-work .main-container {
-  height: 100%;
-  overflow-y: scroll;
-  padding: 50px 0 100px;
-}
-.state-work .main {
+/* WORK */
+.content-work {
   background: #FFFFFF;
   border-radius: 2px;
   padding: 10px 30px;
 }
-.state-work h1 {
+.content-work h1 {
   font-size: 3em;
   margin: 0;
 }
-.state-work h2 {
+.content-work h2 {
   margin: 10px 0 0 0;
   font-size: 2em;
 }
-.state-work h3 {
+.content-work h3 {
   font-size: 1.5em;
 }
-.state-work p {
+.content-work p {
   font-size: 1.5em;
 }
-.state-work p.name {
+.content-work p.name {
   font-family: 'Arvo', sans-serif, Helvetica, Helvetica Neue, Arial;
   font-weight: 400;
   text-align: center;
@@ -2101,7 +2056,7 @@ a:visited {
   text-transform: uppercase;
   margin: 30px 0 0 0;
 }
-.state-work p.title {
+.content-work p.title {
   text-align: center;
   font-size: 1.5em;
   margin-top: 0;
@@ -2109,97 +2064,80 @@ a:visited {
   color: #444;
   border-bottom: 2px solid #222222;
 }
-.state-work section {
+.content-work section {
   border-top: 1px solid #444444;
   padding: 15px 0;
 }
-.state-work section.intro {
+.content-work section.intro {
   border: none;
   padding: 15px 0;
 }
-.state-work section ul {
+.content-work section ul {
   padding: 0 0 0 1.75em;
   margin: 0.5em 0 0 0;
 }
-.state-work section ul > li {
+.content-work section ul > li {
   font-size: 1.25em;
   line-height: 1.5em;
 }
-.state-work section ul > li em {
+.content-work section ul > li em {
   font-size: 0.9em;
 }
-.state-work .text > a {
+.content-work .text > a {
   display: block;
   text-align: right;
   font-size: 1.4em;
 }
-.state-work .text a,
-.state-work .text a:visited,
-.state-work .text a:active {
+.content-work .text a,
+.content-work .text a:visited,
+.content-work .text a:active {
   color: #333;
   text-decoration: none;
 }
-.state-work .text a:hover {
+.content-work .text a:hover {
   text-decoration: underline;
 }
-.state-work .image {
+.content-work .image {
   text-align: right;
   padding: 15px 0 15px 15px;
 }
-.state-work .image img {
+.content-work .image img {
   width: 100%;
   max-width: 300px;
 }
-.state-work .moreprojects a {
+.content-work .moreprojects a {
   color: #333;
   text-decoration: none;
 }
-.state-work .moreprojects a:hover {
+.content-work .moreprojects a:hover {
   text-decoration: underline;
 }
-.state-resume {
-  overflow: hidden;
-}
-.state-resume .main-container {
-  height: 100%;
-  overflow-y: scroll;
-  padding: 50px 0 100px;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-perspective: 700px;
-  -moz-perspective: 700px;
-  perspective: 700px;
-}
-.state-resume .main {
+/* RESUME */
+.content-resume {
   background: #FFFFFF;
   border-radius: 2px;
   padding: 10px 30px;
   -webkit-box-shadow: -5px 5px 25px 5px rgba(41, 41, 41, 0.25);
   box-shadow: -5px 5px 25px 5px rgba(41, 41, 41, 0.25);
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  transition: all 500ms;
-  -webkit-animation: btnEnter 2s 1 ease-out;
   padding-bottom: 50px;
 }
-.state-resume h1 {
+.content-resume h1 {
   font-size: 3em;
   margin: 0;
 }
-.state-resume h2 {
+.content-resume h2 {
   border-top: 1px solid #444444;
   padding-top: 15px;
   margin: 10px 0 0 0;
   font-size: 2em;
 }
-.state-resume h3 {
+.content-resume h3 {
   font-size: 1.5em;
 }
-.state-resume p {
+.content-resume p {
   font-size: 1.5em;
 }
-.state-resume p.name {
+.content-resume p.name {
   font-family: 'Arvo', sans-serif, Helvetica, Helvetica Neue, Arial;
   font-weight: 400;
   text-align: center;
@@ -2208,7 +2146,7 @@ a:visited {
   text-transform: uppercase;
   margin: 30px 0 0 0;
 }
-.state-resume p.title {
+.content-resume p.title {
   text-align: center;
   font-size: 1.5em;
   margin-top: 0;
@@ -2216,7 +2154,7 @@ a:visited {
   color: #444;
   border-bottom: 2px solid #222222;
 }
-.state-resume a.download {
+.content-resume a.download {
   position: relative;
   color: #444444;
   text-decoration: none;
@@ -2225,24 +2163,24 @@ a:visited {
   padding: 4px 8px;
   border-radius: 10px;
 }
-.state-resume a.download:hover {
+.content-resume a.download:hover {
   color: #222222;
 }
-.state-resume a.download:active {
+.content-resume a.download:active {
   top: 1px;
   left: 1px;
 }
-.state-resume a.download .fa {
+.content-resume a.download .fa {
   text-decoration: underline;
 }
-.state-resume .location {
+.content-resume .location {
   float: right;
   width: 180px;
   height: 100px;
   margin: 0 0 10px 10px;
   position: relative;
 }
-.state-resume .location img {
+.content-resume .location img {
   width: 180px;
   height: 100px;
   position: absolute;
@@ -2263,7 +2201,7 @@ a:visited {
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
 }
-.state-resume .location img + img {
+.content-resume .location img + img {
   opacity: 0;
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -2271,62 +2209,62 @@ a:visited {
   -o-filter: grayscale(0%);
   filter: none;
 }
-.state-resume .location:hover img + img {
+.content-resume .location:hover img + img {
   opacity: 1;
 }
-.state-resume section.intro ul,
-.state-resume section.skills ul {
+.content-resume section.intro ul,
+.content-resume section.skills ul {
   padding: 0 0 0 1.75em;
   margin: 0.5em 0 0 0;
 }
-.state-resume section.intro ul > li,
-.state-resume section.skills ul > li {
+.content-resume section.intro ul > li,
+.content-resume section.skills ul > li {
   font-size: 1.25em;
   line-height: 1.5em;
 }
-.state-resume section.intro ul > li em,
-.state-resume section.skills ul > li em {
+.content-resume section.intro ul > li em,
+.content-resume section.skills ul > li em {
   font-size: 0.9em;
 }
-.state-resume section.agencies > ul {
+.content-resume section.agencies > ul {
   list-style: none;
   padding: 0;
 }
-.state-resume section.agencies > ul > li {
+.content-resume section.agencies > ul > li {
   margin: 0 0 15px 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid #aaa;
   min-height: 116px;
 }
-.state-resume section.agencies > ul > li:last-child {
+.content-resume section.agencies > ul > li:last-child {
   border-bottom: none;
 }
-.state-resume section.agencies > ul > li h3 {
+.content-resume section.agencies > ul > li h3 {
   margin: 0 0 5px 0;
 }
-.state-resume section.agencies > ul > li p {
+.content-resume section.agencies > ul > li p {
   margin: 0;
 }
-.state-resume section.agencies > ul > li p em {
+.content-resume section.agencies > ul > li p em {
   font-size: 0.9em;
 }
-.state-resume section.agencies > ul > li > ul {
+.content-resume section.agencies > ul > li > ul {
   list-style: none;
   padding: 0;
   margin: 0.5em 0 0 0;
 }
-.state-resume section.agencies > ul > li > ul > li {
+.content-resume section.agencies > ul > li > ul > li {
   font-family: 'Fontawesome';
   font-size: 1.25em;
   line-height: 1.5em;
 }
-.state-resume section.agencies > ul > li > ul > li:before {
+.content-resume section.agencies > ul > li > ul > li:before {
   margin-right: 0.25em;
 }
-.state-resume section.agencies > ul > li > ul > li em {
+.content-resume section.agencies > ul > li > ul > li em {
   font-size: 0.9em;
 }
-.state-resume section.onlineprofiles a {
+.content-resume section.onlineprofiles a {
   line-height: 2em;
   text-decoration: none;
   background: #EEE;
@@ -2340,10 +2278,10 @@ a:visited {
   -o-transition: background 500ms ease-out;
   transition: background 500ms ease-out;
 }
-.state-resume section.onlineprofiles a:hover {
+.content-resume section.onlineprofiles a:hover {
   background: #bbb;
 }
-.state-resume section.onlineprofiles a i {
+.content-resume section.onlineprofiles a i {
   margin-right: 4px;
 }
 .footer-container {

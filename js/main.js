@@ -1,3 +1,6 @@
+// Hello there. You checking out my code? You sexy beast.
+// contact me via: contact@mauricemelchers.nl
+
 "use strict";
 var console = console || {};
 var MEPHYSTO = MEPHYSTO || {
@@ -13,36 +16,47 @@ var MEPHYSTO = MEPHYSTO || {
 	vy : 0,
 	ax : 0,
 	ay : 0,
-	delay : 10,
-	vMultiplier : 3,
+	delay : 500,
 	targetElement : {},
 	sfx : {
-		soundPoolUrl : ["sfx/squelch.mp3","sfx/guitar_wank.mp3","sfx/plugin.mp3","sfx/click.mp3","sfx/electric.mp3"],
+		soundPoolUrl : [
+			"sfx/squelch.mp3",
+			"sfx/guitar_wank.mp3",
+			"sfx/plugin.mp3",
+			"sfx/click.mp3",
+			"sfx/electric.mp3"
+		],
     getRandom : function() {
     	return new Audio(MEPHYSTO.sfx.soundPoolUrl[Math.floor(Math.random() * this.soundPoolUrl.length)]);
     }
 	},
 	init : function(){
-		console.info('Hi there! Looking to check out my unminified source files? Check out my Github page on https://github.com/mephysto\n Any other questions or maybe even job offers? Mail me at contact@mauricemelchers.nl ;)'); // Hello for checking the code, you sexy beast you.
-		function checkState(name){
-			if($('body').hasClass('state-' + name)){
-				return true;
-			}
-		};
-		if(checkState('landing')){
-			// if browser doesn't support devicemotion evnts use mouse location instead. Firefox somehow supports it but is being a butt about it.
-	    if (window.DeviceMotionEvent===undefined || (navigator.userAgent.search("Firefox") >= 0) === true) {
-	    	// we can't, use mousemove instead
-				$( ".main-container" ).mousemove(MEPHYSTO.onMouseMove);
-	    } else{
-	    	// else register device motions
-	    	MEPHYSTO.targetElement = document.getElementById('maincard');
-				window.ondevicemotion = MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, 250);
+		console.info('%c Hi there! Looking to check out my unminified source files? Have a look around my Github page on https://github.com/mephysto/mephysto.github.io\n Any other questions or maybe even job offers? Mail me at contact@mauricemelchers.nl ;)', 'background: #bada55; color: #222'); 
 
+		/* Move the card on the landing page on mouse move / device tilt */
+
+		// TODO: Update these listeners when moving back to landingpage, after visitor starts the sesh on any other page
+		if(MEPHYSTO.checkState('landing')){
+			// if browser doesn't support devicemotion evnts use mouse location instead. Firefox somehow supports it but is being a butt about it.
+	    if (window.DeviceMotionEvent !== undefined && (navigator.userAgent.search("Firefox") >= 0) === false) {
+	    	// register device motions
+	    	MEPHYSTO.targetElement = document.getElementById('maincard');
+				window.ondevicemotion = MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay);
+	    } else{
+	    	// we can't, use mousemove instead
+				$( ".main-container" ).mousemove(MEPHYSTO.throttle(MEPHYSTO.onMouseMove, MEPHYSTO.delay));
 	    }
 		};
-    $('.btnLightning').hover(function(){MEPHYSTO.sfx.getRandom().play()}, function(){});
+		/* Button hover sound effect */
+    $('.btnLightning').mouseenter(function(){MEPHYSTO.sfx.getRandom().play()});
 	},
+	// check if we're on landing page
+	checkState : function(name) {
+		if($('body').hasClass('state-' + name)){
+			return true;
+		}
+	},
+	// calculate tilting of landing card based on cursor location
 	onMouseMove : function(e){
 		MEPHYSTO.sw = window.innerWidth * 0.5;
 		MEPHYSTO.sh = window.innerHeight * 0.5;
@@ -52,19 +66,23 @@ var MEPHYSTO = MEPHYSTO || {
 		MEPHYSTO.ox = Math.floor((MEPHYSTO.sw - MEPHYSTO.mx) / MEPHYSTO.sw*100) / -100;
 		MEPHYSTO.oy = Math.floor((MEPHYSTO.sh - MEPHYSTO.my) / MEPHYSTO.sh*100) / 100;
 
-		document.getElementById('maincard').style.MozTransform = "rotateX(" + MEPHYSTO.oy * 15 + "deg) rotateY(" + MEPHYSTO.ox * 20 + "deg) translate3d(0,0,0px)";
-		document.getElementById('maincard').style.webkitTransform = "rotateX(" + MEPHYSTO.oy * 15 + "deg) rotateY(" + MEPHYSTO.ox * 20 + "deg) translate3d(0,0,0px)";
+		MEPHYSTO.tiltLandingCard(MEPHYSTO.oy * 15, MEPHYSTO.ox * 20);
 	},
+	// calculate tilting of landing card based on device tiltage
 	onDeviceMotion : function(e){
 		MEPHYSTO.ax = e.accelerationIncludingGravity.x;
 		MEPHYSTO.ay = e.accelerationIncludingGravity.y;
-		// we're not using velocity today
+		// NYI: we're not using velocity yet
 		// MEPHYSTO.vy = MEPHYSTO.vy + -(MEPHYSTO.ay);
 		// MEPHYSTO.vx = MEPHYSTO.vx + MEPHYSTO.ax;
 		MEPHYSTO.x = parseInt(MEPHYSTO.ay * 5);
 		MEPHYSTO.y = parseInt(MEPHYSTO.ax * 10);
-		MEPHYSTO.targetElement.style.webkitTransform = "rotateX(" + MEPHYSTO.x + "deg) rotateY(" + MEPHYSTO.y + "deg) translate3d(0,0,0px)"
-		MEPHYSTO.targetElement.style.MozTransform = "rotateX(" + MEPHYSTO.x + "deg) rotateY(" + MEPHYSTO.y + "deg) translate3d(0,0,0px)"
+		MEPHYSTO.tiltLandingCard(MEPHYSTO.x, MEPHYSTO.y);
+	},
+	// tilt the landing card
+	tiltLandingCard : function(_x, _y){
+		MEPHYSTO.targetElement.style.webkitTransform = "rotateX(" + _x + "deg) rotateY(" + _y + "deg) translate3d(0,0,0px)"
+		MEPHYSTO.targetElement.style.MozTransform = "rotateX(" + _x + "deg) rotateY(" + _y + "deg) translate3d(0,0,0px)"
 	},
 	// wait till events are done triggering before updating with callback
 	debouncer: function(func, wait, immediate) {
@@ -79,6 +97,7 @@ var MEPHYSTO = MEPHYSTO || {
 			if (immediate && !timeout) func.apply(context, args);
 		};
 	},
+
 	// limit the amount of calls being triggered per second
 	throttle : function(fn, threshhold, scope) {
 	  threshhold || (threshhold = 250);

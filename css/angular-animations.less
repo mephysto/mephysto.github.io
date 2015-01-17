@@ -1,42 +1,20 @@
+@transitionTime: 250ms;
+@AnimationTime: 250ms;
+@transition: @transitionTime linear all;
 
-.ng-enter {
-  -webkit-animation: 0.5s fade-in;
-  -moz-animation: 0.5s fade-in;
-  -o-animation: 0.5s fade-in;
-  animation: 0.5s fade-in;
-  z-index: 100;
+.main-container.ng-enter, .main-container.ng-leave{
+  -webkit-transition: @transition;
+  transition: @transition;
 }
-
-.ng-leave {
-  -webkit-animation: 0.5s fade-out;
-  -moz-animation: 0.5s fade-out;
-  -o-animation: 0.5s fade-out;
-  animation: 0.5s fade-out;
-  z-index: 99;
+.main-container.ng-enter{
+  opacity: 0;
 }
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.main-container.ng-enter-active{
+  opacity: 1;
 }
-@-moz-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.main-container.ng-leave{
+  opacity: 1;
 }
-@-webkit-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-moz-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-@-webkit-keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
+.main-container.ng-leave-active {
+  opacity: 0;
 }

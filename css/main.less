@@ -199,173 +199,176 @@ a, a:visited{
 	-o-animation: btnStar 150ms infinite ease;
 }
 
-.state-landing{
-	.main-container{
-	  -webkit-transform-style: preserve-3d;
-	  -moz-transform-style: preserve-3d;
-	  transform-style: preserve-3d;
-		-webkit-perspective:700px; /* Chrome, Safari, Opera  */
-		-moz-perspective:700px; /* Chrome, Safari, Opera  */
-		perspective:700px; /* Chrome, Safari, Opera  */
-	  height: 100%;
-		position: relative;
-	}
-	.card{
-	  -webkit-transition: -webkit-transform 1s ease-out;
-	  -moz-transition: -moz-transform 1s ease-out;
-	  transition: transform 1s ease-out;
-	  -webkit-transform-style: preserve-3d;
-	  -moz-transform-style: preserve-3d;
-	  transform-style: preserve-3d;
-		width: 700px;
-		height: 500px;
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		margin-left: -350px;
-		margin-top: -250px;
-		-webkit-transform: translate3d(0,0,1000px);
-		-moz-transform: translate3d(0,0,1000px);
-		transform: translate3d(0,0,1000px);
-		-webkit-backface-visibility: hidden;
-		-moz-backface-visibility: hidden;
-		-ms-backface-visibility: hidden;
-		-o-backface-visibility: hidden;
-		backface-visibility: hidden;
-		&.active{
-			-webkit-transform: translate3d(0,0,0px);
-			-moz-transform: translate3d(0,0,0px);
-			transform: translate3d(0,0,0px);
-		}
-	}
-	.card-shadow{
-		content: "";
-		width: 700px;
-		height: 500px;
-		background: url(../img/build/card-shadow.png) no-repeat center center;
-		background-size: contain;
-		display: block;
-		position: absolute;
-		top:0;
-		left:0;
-		-webkit-transform: translate3d(0,0,-200px);
-		-moz-transform: translate3d(0,0,-200px);
-		transform: translate3d(0,0,-200px);
-	}
-	.card-background{
-		position: absolute;
-		top:0;
-		left:0;
-		width: 700px;
-		height: 500px;
-		background: url(../img/build/card-bg.png) no-repeat center center;
-		background-size: contain;
-		-webkit-transform: translate3d(0,0,-25px);
-		-moz-transform: translate3d(0,0,-25px);
-		transform: translate3d(0,0,-25px);
-	}
-	.card-content{
-		color: #FFFFFF;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-top: -90px;
-		margin-left: -160px;
-		width: 340px;
-		height: 200px;
+.main-container{
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+	-webkit-perspective:700px; /* Chrome, Safari, Opera  */
+	-moz-perspective:700px; /* Chrome, Safari, Opera  */
+	perspective:700px; /* Chrome, Safari, Opera  */
+	height: 100%;
+	padding: 50px 0 100px;
+	position: relative;
+	overflow: hidden;
+	overflow-y: scroll;
+
+}
+
+/* LANDING */
+.content-landing{
+}
+
+.landing-card{
+  -webkit-transition: -webkit-transform 1s ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+	width: 700px;
+	height: 500px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -350px;
+	margin-top: -250px;
+	-webkit-transform: translate3d(0,0,1000px);
+	-moz-transform: translate3d(0,0,1000px);
+	transform: translate3d(0,0,1000px);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+	&.active{
 		-webkit-transform: translate3d(0,0,0px);
 		-moz-transform: translate3d(0,0,0px);
 		transform: translate3d(0,0,0px);
+	}
+}
+.landing-card-shadow{
+	content: "";
+	width: 700px;
+	height: 500px;
+	background: url(../img/build/card-shadow.png) no-repeat center center;
+	background-size: contain;
+	display: block;
+	position: absolute;
+	top:0;
+	left:0;
+	-webkit-transform: translate3d(0,0,-200px);
+	-moz-transform: translate3d(0,0,-200px);
+	transform: translate3d(0,0,-200px);
+}
+.landing-card-background{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 700px;
+	height: 500px;
+	background: url(../img/build/card-bg.png) no-repeat center center;
+	background-size: contain;
+	-webkit-transform: translate3d(0,0,-25px);
+	-moz-transform: translate3d(0,0,-25px);
+	transform: translate3d(0,0,-25px);
+}
+.landing-card-content{
+	color: #FFFFFF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -90px;
+	margin-left: -160px;
+	width: 340px;
+	height: 200px;
+	-webkit-transform: translate3d(0,0,0px);
+	-moz-transform: translate3d(0,0,0px);
+	transform: translate3d(0,0,0px);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	h1{
+		color: #FFFFFF;
+		background: url(../img/build/logo-mid.png) no-repeat;
+		background: url(../img/build/logo-no-bg.svg) no-repeat;
+		background-size: contain;
+		width: 250px;
+		height: 241px;
+		text-indent: -999em;
+		position: absolute;
+		top: -180px;
+		left: -130px;
+		-webkit-transform: translate3d(0,0,-10px);
+		-moz-transform: translate3d(0,0,-10px);
+		transform: translate3d(0,0,-10px);
 		-webkit-transform-style: preserve-3d;
 		-moz-transform-style: preserve-3d;
 		transform-style: preserve-3d;
-		h1{
-			color: #FFFFFF;
-			background: url(../img/build/logo-mid.png) no-repeat;
-			background: url(../img/build/logo-no-bg.svg) no-repeat;
-			background-size: contain;
-			width: 250px;
+		&::before{
+			content:"";
+			width:250px;
 			height: 241px;
-			text-indent: -999em;
+			display: block;
 			position: absolute;
-			top: -180px;
-			left: -130px;
-			-webkit-transform: translate3d(0,0,-10px);
-			-moz-transform: translate3d(0,0,-10px);
-			transform: translate3d(0,0,-10px);
-			-webkit-transform-style: preserve-3d;
-			-moz-transform-style: preserve-3d;
-			transform-style: preserve-3d;
-			&::before{
-				content:"";
-				width:250px;
-				height: 241px;
-				display: block;
-				position: absolute;
-				-webkit-transform: translate3d(-10px, 10px, -40px);
-				-moz-transform: translate3d(-10px, 10px, -40px);
-				transform: translate3d(-10px, 10px, -40px);
-				background: url(../img/build/logo-triangle.svg) no-repeat;
-				background-size: contain;
-			};
-		}
-		h2{
-			margin: 20px 0 0 0;
-			padding: 0;
-			font-size: 3em;
-			font-weight: normal;
-			text-align: right;
-			-webkit-transform: translateZ(5px);
-			-moz-transform: translateZ(5px);
-			transform: translateZ(5px);
-		}
-		p{
-			margin-top: 0;
-			padding-left: 60px;
-			font-size: 1.6em;
-			text-align: right;
-		}
-		a{
-			text-align: left;
-			display: block;
-			margin-top: 13px;
-			margin-left: -50px;
-			padding: 0.25em 0.5em;
-			font-size: 1.2em;
-			line-height: 1.5em;
-			display: block;
-			background: #FFF;
-			color: #000000;
-			margin-bottom: 10px;
-		  -webkit-transition: -webkit-transform 100ms ease-out;
-		  -moz-transition: -moz-transform 100ms ease-out;
-		  transition: transform 100ms ease-out;
-		  text-decoration: none;
-			-webkit-transform: translateZ(0px);
-			-moz-transform: translateZ(0px);
-			transform: translateZ(0px);
-			&:hover{
-				-webkit-transform: translateZ(35px);
-				-moz-transform: translateZ(35px);
-				transform: translateZ(35px);
-			};
-			i{
-				margin-right: 0.25em;
-			}
+			-webkit-transform: translate3d(-10px, 10px, -40px);
+			-moz-transform: translate3d(-10px, 10px, -40px);
+			transform: translate3d(-10px, 10px, -40px);
+			background: url(../img/build/logo-triangle.svg) no-repeat;
+			background-size: contain;
+		};
+	}
+	h2{
+		margin: 20px 0 0 0;
+		padding: 0;
+		font-size: 3em;
+		font-weight: normal;
+		text-align: right;
+		-webkit-transform: translateZ(5px);
+		-moz-transform: translateZ(5px);
+		transform: translateZ(5px);
+	}
+	p{
+		margin-top: 0;
+		padding-left: 60px;
+		font-size: 1.6em;
+		text-align: right;
+	}
+	a{
+		text-align: left;
+		display: block;
+		margin-top: 13px;
+		margin-left: -50px;
+		padding: 0.25em 0.5em;
+		font-size: 1.2em;
+		line-height: 1.5em;
+		display: block;
+		background: #FFF;
+		color: #000000;
+		margin-bottom: 10px;
+	  -webkit-transition: -webkit-transform 100ms ease-out;
+	  -moz-transition: -moz-transform 100ms ease-out;
+	  transition: transform 100ms ease-out;
+	  text-decoration: none;
+		-webkit-transform: translateZ(0px);
+		-moz-transform: translateZ(0px);
+		transform: translateZ(0px);
+		&:hover{
+			-webkit-transform: translateZ(35px);
+			-moz-transform: translateZ(35px);
+			transform: translateZ(35px);
+		};
+		i{
+			margin-right: 0.25em;
 		}
 	}
 }
-.state-work{
-	.main-container{
-		height: 100%;
-		overflow-y: scroll;
-		padding: 50px 0 100px;
-	}
-	.main{
-		background: #FFFFFF;
-		border-radius: 2px;
-		padding: 10px 30px;
-	}
+
+/* WORK */
+.content-work{
+	background: #FFFFFF;
+	border-radius: 2px;
+	padding: 10px 30px;
+
 	h1{
 		font-size: 3em;
 		margin: 0;
@@ -415,19 +418,6 @@ a, a:visited{
 			}
 		}
 	}
-	// section.intro{
-	// 	ul{
-	// 		padding: 0 0 0 1.75em;
-	// 		margin: 0.5em 0 0 0;
-	// 		> li{
-	// 			font-size: 1.25em;
-	// 			line-height: 1.5em;
-	// 			em{
-	// 				font-size: 0.9em;
-	// 			}
-	// 		}
-	// 	}
-	// }
 	.text{
 		> a{
 			display: block;
@@ -460,36 +450,23 @@ a, a:visited{
 		}
 	}
 }
-.state-resume{
-	overflow: hidden;
-	.main-container{
-		height: 100%;
-		overflow-y: scroll;
-		padding: 50px 0 100px;
-		// overflow: hidden;
-		-webkit-transform-style: preserve-3d;
-		-moz-transform-style: preserve-3d;
-		transform-style: preserve-3d;
-		-webkit-perspective: 700px;
-		-moz-perspective: 700px;
-		perspective: 700px;
-	}
-	.main{
-		background: #FFFFFF;
-		border-radius: 2px;
-		// overflow-y: scroll;
-		// height: 80%;
-		// margin-top: 40px;
-		padding: 10px 30px;
-		-webkit-box-shadow: -5px 5px 25px 5px rgba(41,41,41,0.25);
-		box-shadow: -5px 5px 25px 5px rgba(41,41,41,0.25);
 
-	  -webkit-transition: all 500ms;
-	  -moz-transition: all 500ms;
-	  transition: all 500ms;
-		-webkit-animation: btnEnter 2s 1 ease-out;
-		padding-bottom: 50px;
-	}
+/* RESUME */
+.content-resume{
+	background: #FFFFFF;
+	border-radius: 2px;
+	// overflow-y: scroll;
+	// height: 80%;
+	// margin-top: 40px;
+	padding: 10px 30px;
+	-webkit-box-shadow: -5px 5px 25px 5px rgba(41,41,41,0.25);
+	box-shadow: -5px 5px 25px 5px rgba(41,41,41,0.25);
+
+  // -webkit-transition: all 500ms;
+  // -moz-transition: all 500ms;
+  // transition: all 500ms;
+	// -webkit-animation: btnEnter 2s 1 ease-out;
+	padding-bottom: 50px;
 	h1{
 		font-size: 3em;
 		margin: 0;
