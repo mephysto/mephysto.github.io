@@ -1,0 +1,203 @@
+
+/* RESUME */
+.content-resume{
+	background: #FFFFFF;
+	border-radius: 2px;
+	padding: 10px 30px;
+	-webkit-box-shadow: -5px 5px 25px 5px rgba(41,41,41,0.25);
+	box-shadow: -5px 5px 25px 5px rgba(41,41,41,0.25);
+	padding-bottom: 50px;
+	h1{
+		font-size: 3em;
+		margin: 0;
+		display: block;
+		&::before{
+			margin-right: 10px;
+		}
+	}
+	h2{
+		border-top: 1px solid #444444;
+		padding-top: 15px;
+		margin: 10px 0 0 0;
+		font-size: 2em;
+	}
+	h3{
+		font-size: 1.5em;
+	}
+	p{
+		font-size: 1.5em;
+	}
+	p.name{
+		.HeadingFont;
+		text-align: center;
+		font-size: 3em;
+		padding: 0;
+		text-transform: uppercase;
+		margin: 30px 0 0 0;
+	}
+	p.title{
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: 0;
+		padding: 0 0 10px 0;
+		color: #444;
+		border-bottom: 2px solid #222222;
+	}
+	a.download{
+		position: relative;
+		color: #444444;
+		text-decoration: none;
+		background: #aaa;
+		float: right;
+		padding: 4px 8px;
+		border-radius: 10px;
+		&:hover{
+			color: #222222;
+		};
+		&:active{
+			top:1px;
+			left:1px;
+		};
+		.fa{
+			text-decoration: underline;			
+		}
+	}
+	.location{
+		float: right;
+		width: 180px;
+		height: 100px;
+		margin: 0 0 10px 10px;
+		position: relative;
+		img{
+			width: 180px;
+			height: 100px;
+			position: absolute;
+			top:0;
+			left:0;
+		  -webkit-transition: all 500ms;
+		  -moz-transition: all 500ms;
+		  transition: all 500ms;
+		  filter: grayscale(100%);
+		  filter: url(../img/build/grayscale.svg#greyscale); /* Firefox 4+ */
+		  filter: gray; /* IE 6-9 */
+		  -webkit-filter: grayscale(100%);
+		  -moz-filter: grayscale(100%);
+		  -ms-filter: grayscale(100%);
+		  -o-filter: grayscale(100%);
+		  & + img{
+		  	opacity: 0;
+			  -webkit-filter: grayscale(0%);
+			  -moz-filter: grayscale(0%);
+			  -ms-filter: grayscale(0%);
+			  -o-filter: grayscale(0%);
+		  	filter:none;
+		  };
+		}
+		&:hover img + img{
+			opacity: 1;
+		};
+	}
+	section.intro, section.resume-skills{
+		ul{
+			padding: 0 0 0 1.75em;
+			margin: 0.5em 0 0 0;
+			> li{
+				em{
+					font-size: 0.9em;
+				}
+			}
+		}
+	}
+	section.agencies{
+		> ul{
+			list-style: none;
+			padding: 0;
+			> li{
+				margin: 0 0 15px 20px;
+				padding-bottom: 15px;
+				border-bottom: 1px solid #aaa;
+				min-height: 116px;
+				&:last-child{
+					border-bottom: none;
+				};
+				h3{
+					margin: 0 0 5px 0;
+				}
+				p{
+					margin: 0;
+					em{
+						font-size: 0.9em;
+					}
+				}
+				> ul{
+					list-style: none;
+					padding: 0;
+					margin: 0.5em 0 0 0;
+					> li{
+						font-family: 'Fontawesome';
+						font-size: 1.25em;
+						line-height: 1.5em;
+						&:before{
+							margin-right: 0.25em;
+						}
+						em{
+							font-size: 0.9em;
+						}
+					}
+				}
+
+			}
+		}
+	}
+	section.onlineprofiles{
+		a{
+			line-height: 2em;
+			text-decoration: none;
+			background: #EEE;
+			border-radius: 90px;
+			padding: 0px 10px;
+			display: inline-block;
+			margin-right: 5px;
+
+			-webkit-transition: background 500ms ease-out;
+			-moz-transition: background 500ms ease-out;
+			-ms-transition: background 500ms ease-out;
+			-o-transition: background 500ms ease-out;
+			transition: background 500ms ease-out;
+			
+			&:hover{
+				background: #bbb;
+			}
+			i{
+				margin-right: 4px;
+			}
+		}
+
+	}
+}
+.resume-picture{
+	float: right;
+	width: 33.3%;
+	img{
+		width: 100%;
+	}
+}
+.resume-overview{
+	width: 66.6%;
+	li{
+		font-size: 1.75em;
+		// margin-left: 1em;
+		margin: 4px 1em;
+		line-height: 1.15em;
+		&.fa::before{
+			margin-left: -1.5em;
+			margin-right: 0.5em;
+		}
+	}
+}
+.resume-skills{
+	li{
+		font-size: 1.25em;
+		line-height: 1.5em;
+	}
+}

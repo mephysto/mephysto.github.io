@@ -2037,6 +2037,9 @@ a:visited {
   font-size: 3em;
   margin: 0;
 }
+.content-work h1::before {
+  margin-right: 10px;
+}
 .content-work h2 {
   margin: 10px 0 0 0;
   font-size: 2em;
@@ -2070,7 +2073,10 @@ a:visited {
 }
 .content-work section.intro {
   border: none;
-  padding: 15px 0;
+  padding: 0 0 15px 0;
+}
+.content-work section.intro p {
+  font-size: 1.75em;
 }
 .content-work section ul {
   padding: 0 0 0 1.75em;
@@ -2082,6 +2088,9 @@ a:visited {
 }
 .content-work section ul > li em {
   font-size: 0.9em;
+}
+.content-work .text {
+  padding: 0 10px 0 0;
 }
 .content-work .text > a {
   display: block;
@@ -2100,10 +2109,15 @@ a:visited {
 .content-work .image {
   text-align: right;
   padding: 15px 0 15px 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .content-work .image img {
   width: 100%;
   max-width: 300px;
+  float: left;
+  visibility: hidden;
 }
 .content-work .moreprojects a {
   color: #333;
@@ -2124,6 +2138,10 @@ a:visited {
 .content-resume h1 {
   font-size: 3em;
   margin: 0;
+  display: block;
+}
+.content-resume h1::before {
+  margin-right: 10px;
 }
 .content-resume h2 {
   border-top: 1px solid #444444;
@@ -2213,17 +2231,12 @@ a:visited {
   opacity: 1;
 }
 .content-resume section.intro ul,
-.content-resume section.skills ul {
+.content-resume section.resume-skills ul {
   padding: 0 0 0 1.75em;
   margin: 0.5em 0 0 0;
 }
-.content-resume section.intro ul > li,
-.content-resume section.skills ul > li {
-  font-size: 1.25em;
-  line-height: 1.5em;
-}
 .content-resume section.intro ul > li em,
-.content-resume section.skills ul > li em {
+.content-resume section.resume-skills ul > li em {
   font-size: 0.9em;
 }
 .content-resume section.agencies > ul {
@@ -2284,6 +2297,29 @@ a:visited {
 .content-resume section.onlineprofiles a i {
   margin-right: 4px;
 }
+.resume-picture {
+  float: right;
+  width: 33.3%;
+}
+.resume-picture img {
+  width: 100%;
+}
+.resume-overview {
+  width: 66.6%;
+}
+.resume-overview li {
+  font-size: 1.75em;
+  margin: 4px 1em;
+  line-height: 1.15em;
+}
+.resume-overview li.fa::before {
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+}
+.resume-skills li {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
 .footer-container {
   background: #000000;
   position: fixed;
@@ -2296,33 +2332,59 @@ a:visited {
   margin: 0;
   width: 100%;
 }
-.footer-container footer p {
+.footer-container footer > p {
   color: #FFFFFF;
   display: inline;
   line-height: 20px;
   margin: 0 0 0 5px;
   padding: 0;
 }
-.footer-container footer p a,
-.footer-container footer p a:visited {
+.footer-container footer > p a,
+.footer-container footer > p a:visited {
   color: inherit;
 }
-.footer-container footer p a:hover .fa {
+.footer-container footer > p a:hover .fa {
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.35);
 }
-.footer-container footer p .fa {
+.footer-container footer > p .fa {
   font-size: 1.5em;
 }
-.footer-container footer p .fa + span {
+.footer-container footer > p .fa + span {
   display: none;
 }
-.footer-container footer iframe {
-  height: 20px!important;
-  width: 150px;
-  position: relative;
-  top: -2px;
+.footer-like {
   float: right;
+  background: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px 0 0;
+  border-radius: 2px;
+  position: relative;
+}
+.footer-like p {
+  line-height: 20px;
+  color: #2222ca;
+  margin: 0;
+  padding: 0;
+}
+.footer-like p > span {
   display: none;
+}
+.footer-like iframe {
+  border: none;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+  min-height: 50px;
+  box-sizing: content-box;
+  padding: 20px 0 0 20px;
+}
+.footer-like:hover iframe {
+  display: block;
 }
 /* ==========================================================================
    Media Queries
@@ -2365,16 +2427,13 @@ a:visited {
   .oldie nav a {
     margin: 0 0.7%;
   }
-  .footer-container footer iframe {
-    display: block;
-  }
 }
 @media only screen and (min-width: 768px) {
   .header-container {
     display: block;
   }
-  .work .text,
-  .work .image {
+  .content-work .text,
+  .content-work .image {
     float: left;
     width: 50%;
   }
