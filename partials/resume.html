@@ -5,8 +5,8 @@
 		<a href="pdf/Maurice_Melchers_-_resume.pdf" target="_blank" class="download">Download as PDF <i class="fa fa-download"></i></a>
 		<section class="intro clearfix">
 			<h1 class="fa fa-th-list">Resume</h1>
-			<div class="resume-picture">
-				<img src="img/maurice-melchers-face.jpg" alt="Profile picture of Maurice Melchers">
+			<div class="resume-picture" style="background-image:url('img/build/maurice-melchers-profile.jpg')">
+				<img src="img/build/maurice-melchers-profile.jpg" alt="Profile picture of Maurice Melchers" class="hidden">
 			</div>
 			<ul class="resume-overview">
 				<li class="fa fa-check">Front-end web developer with over 6 years of professional experience.</li>
@@ -28,15 +28,15 @@
 			<h2>Professional Experience</h2>
 			<ul>
 
-        <li ng-repeat="agency in resume">
+        <li ng-repeat="client in resume" class="client">
 					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center={{agency.geo.x}},{{agency.geo.y}}&markers={{agency.geo.x}},{{agency.geo.y}}&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center={{agency.geo.x}},{{agency.geo.y}}&markers={{agency.geo.x}},{{agency.geo.y}}&zoom=10&size=180x100&sensor=false">
+						<img src="http://maps.googleapis.com/maps/api/staticmap?center={{client.geo.x}},{{client.geo.y}}&markers={{client.geo.x}},{{client.geo.y}}&zoom=2&size=180x100&sensor=false">
+						<img src="http://maps.googleapis.com/maps/api/staticmap?center={{client.geo.x}},{{client.geo.y}}&markers={{client.geo.x}},{{client.geo.y}}&zoom=10&size=180x100&sensor=false">
 					</div>
-					<h3>{{agency.title}}</h3>
-					<p class="agency-location fa fa-map-marker"><span>{{agency.location}}</span></p>
-					<p class="agency-date fa fa-calendar"><em>{{agency.date}}</em></p>
-					<p class="agency-description fa fa-wrench"><span ng-bind-html="agency.description"></span></p>
+					<h3 class="client-name fa fa-briefcase">{{client.title}}</h3>
+					<p class="client-description fa fa-wrench"><span ng-bind-html="client.description"></span></p>
+					<p class="client-location fa fa-map-marker"><span>{{client.location}}</span></p>
+					<p class="client-date fa fa-calendar"><em>{{client.date}}</em></p>
         </li>
         
       </ul>

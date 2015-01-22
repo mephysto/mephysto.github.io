@@ -2163,17 +2163,6 @@ a:visited {
 .content-resume section.agencies > ul > li:last-child {
   border-bottom: none;
 }
-.content-resume section.agencies > ul > li h3 {
-  margin: 0 0 5px 0;
-}
-.content-resume section.agencies > ul > li p {
-  margin: 0 0 0 0.5em;
-  font-size: 1.25em;
-  line-height: 1.5em;
-}
-.content-resume section.agencies > ul > li p em {
-  font-size: 0.9em;
-}
 .content-resume section.agencies > ul > li > ul {
   list-style: none;
   padding: 0;
@@ -2210,15 +2199,37 @@ a:visited {
 .content-resume section.onlineprofiles a i {
   margin-right: 4px;
 }
-.agency-location::before {
+.client h3 {
+  margin: 0 0 5px 0;
+}
+.client p {
+  margin: 0 0 0 1.5em;
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+.client p em {
+  font-size: 0.9em;
+}
+.client-name {
+  display: block;
+}
+.client-location::before {
   margin-left: 0.25em;
 }
-.agency-description {
+p.client-description {
   display: block;
+  max-width: 66.6%;
+  margin: 5px 0 10px 1.5em;
 }
 .resume-picture {
   float: right;
+  background: center 33.3% no-repeat;
+  background-size: cover;
   width: 33.3%;
+  max-height: 250px;
+  height: 250px;
+  border: 3px solid black;
+  border-radius: 1px;
 }
 .resume-picture img {
   width: 100%;

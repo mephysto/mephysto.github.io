@@ -119,19 +119,7 @@
 				min-height: 116px;
 				&:last-child{
 					border-bottom: none;
-				};
-				h3{
-					margin: 0 0 5px 0;
 				}
-				p{
-					margin: 0 0 0 0.5em;
-					font-size: 1.25em;
-					line-height: 1.5em;
-					em{
-						font-size: 0.9em;
-					}
-				}
-
 				> ul{
 					list-style: none;
 					padding: 0;
@@ -183,20 +171,44 @@
 
 	}
 }
-.agency-location{
+.client{
+	h3{
+		margin: 0 0 5px 0;
+	}
+	p{
+		margin: 0 0 0 1.5em;
+		font-size: 1.25em;
+		line-height: 1.5em;
+		em{
+			font-size: 0.9em;
+		}
+	}
+}
+.client-name{
+	display: block;
+}
+.client-location{
 	&::before{
 		margin-left: 0.25em;
 	}
 }
-.agency-date{
+.client-date{
 
 }
-.agency-description{
+p.client-description{
 	display: block;
+	max-width: 66.6%;
+	margin: 5px 0 10px 1.5em;
 }
 .resume-picture{
 	float: right;
+	background: center 33.3% no-repeat;
+	background-size: cover;
 	width: 33.3%;
+	max-height: 250px;
+	height: 250px;
+	border: 3px solid black;
+	border-radius: 1px;
 	img{
 		width: 100%;
 	}

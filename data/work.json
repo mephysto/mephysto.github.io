@@ -9,7 +9,7 @@
 			],
 		"externalLink" : "https://www.lululemon.com/",
 		"externalLinkName" : "lululemon.com",
-		"image" : "img/work-lululemon.jpg"
+		"image" : "img/build/work-lululemon.jpg"
 	},
 	{
 		"title" : "ECU Life Lessons",
@@ -20,7 +20,7 @@
 		],
 		"externalLink" : "https://www.ecu.edu.au/degrees/overview",
 		"externalLinkName" : "www.ecu.edu.au/degrees/overview",
-		"image" : "img/eculife.jpg"
+		"image" : "img/build/eculife.jpg"
 	},
 	{
 		"title" : "HBF Amaze",
@@ -31,7 +31,7 @@
 		],
 		"externalLink" : "http://www.youramaze.com.au/",
 		"externalLinkName" : "www.youramaze.com.au",
-		"image" : "img/hbfamaze.jpg"
+		"image" : "img/build/hbfamaze.jpg"
 	},
 	{
 		"title" : "ECU Hits",
@@ -42,7 +42,7 @@
 		],
 		"externalLink" : "http://www.ecuhits.com.au/",
 		"externalLinkName" : "www.ecuhits.com.au",
-		"image" : "img/ecu-hits.jpg"
+		"image" : "img/build/ecu-hits.jpg"
 	},
 	{
 		"title" : "Kingspark Naturescape",
@@ -50,7 +50,7 @@
 		"longdescription" : "",
 		"externalLink" : "http://naturescape.dev.longtailportfolio.com",
 		"externalLinkName" : "Naturescape",
-		"image" : "img/naturescape.jpg"
+		"image" : "img/build/naturescape.jpg"
 	}
 ]
 
