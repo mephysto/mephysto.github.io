@@ -5,9 +5,9 @@
 var mephystoApp = angular.module('mephystoApp', [
   'ngRoute',
   'mephystoAnimations',
-  'mephystoControllers'
+  'mephystoControllers',
   // 'mephystoFilters',
-  // 'mephystoServices'
+  'mephystoServices'
 ]);
 
 mephystoApp.config(['$routeProvider',

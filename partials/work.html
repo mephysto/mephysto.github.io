@@ -1,72 +1,32 @@
 <div class="content-work wrapper clearfix">
-	<div class="workmain" id="">
+	<div class="workmain">
 		<p class="name">Maurice Melchers</p>
 		<p class="title">Front-end Web Developer</p>
 		<section class="intro">
-			<h1 class="fa fa-briefcase">Recent Work</h1>
-			<p>Here's a selection of my recent work. My primary job has been front-end webdevelopment. Meaning HTML, CSS, &amp; Javascript.</p>
-			<p>On most of my recent projects, I have also been tasked to create the Interaction Design, and a working prototype based on that. Furthermore, I have been a major part of the concepting phase as well.</p>
+			<h1 class="fa fa-briefcase">Work</h1>
+			<p>My specialty is front-end web development. I enjoy developing aesthetic and functional websites, in line with approved designs. I also enjoy building prototypes for new concepts as an interactive designer, and work towards achieving optimal responsive design, accessibility, usability, and performance for all of my projects.
+			<p>I'm not always a Lone Ranger, though! When working with agencies, I like to actively participate in creative ideation and conceptiong for large scale digital projects.</p>
+			<p>Here is a selection of recently completed work.</p>
 		</section>
-		<!-- WORK: ECU LULULEMON -->
-		<section class="clearfix">
-			<div class="text">
-				<h2>Lululemon Athletica - Digital Magazine</h2>
-				<p>To promote their clothing wear for the holiday season. Lululemon wanted to have a experience site with lifestyle and interviews with their brand ambassadors. The result is a digital magazine which I did the coding for. This had to be compatible in their template system which limited my coding freedom but still required me to deliver animations and support for mobile.</p>
-				<p>For this project I did the all the front-end coding, and helped the team set up a local node.js environment. The magazine ran from November 2014 to January 2015</p>
-				<a href="https://www.lululemon.com/" target="_blank">lululemon.com <i class="fa fa-external-link"></i></a>
+
+		<!-- look into ngbindhtml-->
+    <section class="clearfix" ng-repeat="client in work">
+    	<div class="text">
+				<h2>{{client.title}}</h2>
+				<a ng-href="{{client.externalLink}}" target="_blank">{{client.externalLinkName}}<i class="fa fa-external-link"></i></a>
+				<!-- <p>{{client.shortdescription}}</p> -->
+				<p ng-bind-html="client.shortdescription"></p>
+				<div class="work-more-info">
+					<span>more info</span>
+					<p ng-repeat="paragraph in client.longdescription" ng-bind-html="paragraph"></p>
+				</div>
 			</div>
-			<div class="image clearfix" style="background-image:url('img/work-lululemon.jpg')">
-				<img src="img/work-lululemon.jpg">
+			<div class="image clearfix" style="background-image:url('{{client.image}}')">
+				<img src="{{client.image}}">
 			</div>
-		</section>
-		<!-- WORK: ECU LIFE LESSONS -->
-		<section class="clearfix">
-			<div class="text">
-				<h2>ECU Life Lessons</h2>
-				<p>When <abbr title="Edith Cowan University">ECU</abbr> was in the process of updating their site to a new design, Longtail was tasked on creating a new landing page for future students. So we created a framework where we could 'hang in' future sites.</p>
-				<p>For this project I was part of the concepting team, the Interaction Designer, and front-end developer.</p>
-				<a href="https://www.ecu.edu.au/degrees/overview" target="_blank">www.ecu.edu.au/degrees/overview <i class="fa fa-external-link"></i></a>
-			</div>
-			<div class="image clearfix" style="background-image:url('img/eculife.jpg')">
-				<img src="img/eculife.jpg">
-			</div>
-		</section>
-		<!-- WORK: HBF AMAZE -->
-		<section class="clearfix">
-			<div class="text">
-				<h2>HBF Amaze</h2>
-				<p>HBF Health Insurance knows that everyone has the potential to be healthy and amazing, and they want to help every person in <abbr title="Western Australia">WA</abbr> to achieve that goal. So we built the world's first Facebook ‘AMAZE’ app to evaluate your personal Amaze score and let you compete and share it with the rest of the state.</p>
-				<p>When a user connects to Facebook through the app, we looked at a range of data like the number of tagged photos, likes, friends, events, check-ins, even the frequency of certain key words. This data was then fed into our algorithm to create a personal Amaze score.</p>
-				<p>I was part of the concepting team, I created the Interaction Design, and I created the front-end for this</p>
-				<a href="http://www.youramaze.com.au/" target="_blank">www.youramaze.com.au <i class="fa fa-external-link"></i></a>
-			</div>
-			<div class="image clearfix" style="background-image:url('img/hbfamaze.jpg')">
-				<img src="img/hbfamaze.jpg">
-			</div>
-		</section>
-		<!-- WORK: ECU HITS -->
-		<section class="clearfix">
-			<div class="text">
-				<h2>ECU Hits</h2>
-				<p><abbr title="Edith Cowan University">ECU</abbr> needed a more meaningful experience on their audience. So <a href="http://www.longtail.com.au/" target="_blank">Longtail</a> created ECU Hits, an underground radio station powered by its users.  Any student, future or current, could discover, listen, and share their ultimate playlist themed around an ECU study area.</p>
-				<p>Was part of the concepting, created the interaction design, and the front-end.</p>
-				<a href="http://www.ecuhits.com.au/" target="_blank">www.ecuhits.com.au <i class="fa fa-external-link"></i></a>
-			</div>
-			<div class="image clearfix" style="background-image:url('img/ecu-hits.jpg')">
-				<img src="img/ecu-hits.jpg">
-			</div>
-		</section>
-		<!-- WORK: NATURESCAPE -->
-		<section class="clearfix">
-			<div class="text">
-				<h2>Kingspark Naturescape</h2>
-				<p>Rio Tinto Naturescape Kings Park is a public park in the middle of Perth, Australia. This part of the park is dedicate for children to be educated about the environment. The major challenge of this project was to create a accessible overview of the park while still maintaining an exciting user experience.</p>
-				<a href="http://naturescape.dev.longtailportfolio.com/" target="_blank">Naturescape <i class="fa fa-external-link"></i></a>
-			</div>
-			<div class="image clearfix" style="background-image:url('img/naturescape.jpg')">
-				<img src="img/naturescape.jpg">
-			</div>
-		</section>
+
+    </section>
+
 		<!-- WORK: MORE WORK -->
 		<section class="moreprojects">
 			<h2>Other work...</h2>

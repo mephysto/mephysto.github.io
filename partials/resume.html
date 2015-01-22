@@ -1,5 +1,5 @@
 <div class="content-resume wrapper clearfix">
-	<div class="resumain" id="">
+	<div class="resumain">
 		<p class="name">Maurice Melchers</p>
 		<p class="title">Front-end Web Developer</p>
 		<a href="pdf/Maurice_Melchers_-_resume.pdf" target="_blank" class="download">Download as PDF <i class="fa fa-download"></i></a>
@@ -27,116 +27,19 @@
 		<section class="agencies">
 			<h2>Professional Experience</h2>
 			<ul>
-				<li>
+
+        <li ng-repeat="agency in resume">
 					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=49.2714618,-123.146587&markers=49.2714618,-123.146587&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=49.2714618,-123.146587&markers=49.2714618,-123.146587&zoom=10&size=180x100&sensor=false">
+						<img src="http://maps.googleapis.com/maps/api/staticmap?center={{agency.geo.x}},{{agency.geo.y}}&markers={{agency.geo.x}},{{agency.geo.y}}&zoom=2&size=180x100&sensor=false">
+						<img src="http://maps.googleapis.com/maps/api/staticmap?center={{agency.geo.x}},{{agency.geo.y}}&markers={{agency.geo.x}},{{agency.geo.y}}&zoom=10&size=180x100&sensor=false">
 					</div>
-					<h3>Lululemon Athletica</h3>
-					<p>Vancouver, Canada</p>
-					<p><em>September 2014 – November 2014</em></p>
-					<ul>
-						<li class="fa-wrench">Lululemon athletica is a yoga-inspired athletic apperal company, with stores worldwide. For this project I was brought in to work on a digital magazine. The HTML/CSS/JS were made so it would fit in their custom templating system.</li>
-					</ul>
-				</li>
-				<li>
-					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=49.2852102,-123.1123021&markers=49.2852102,-123.1123021&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=49.2852102,-123.1123021&markers=49.2852102,-123.1123021&zoom=10&size=180x100&sensor=false">
-					</div>
-					<h3>FCV Interactive</h3>
-					<p>Vancouver, Canada</p>
-					<p><em>June 2014</em></p>
-					<ul>
-						<li class="fa-wrench">Got brought on board to work on maintenance work on British Columbia tourism sites. These were HTML/CSS/JS updates and some bugfixes on Kentico templates. Mentionable technologies used: Grunt.js to test, compile, and build the site. </li>
-					</ul>
-				</li>
-				<li>
-					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-31.949973,115.844871&markers=-31.949973,115.844871&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-31.949973,115.844871&markers=-31.949973,115.844871&zoom=10&size=180x100&sensor=false">
-					</div>
-					<h3>Longtail</h3>
-					<p>Perth, Australia</p>
-					<p><em>February 2013 – April 2014</em></p>
-					<ul>
-						<li class="fa-wrench">Worked as a Front End Web Developer doing CSS, HTML and JavaScript. While at the same time keeping up to date with trending technologies. Making sure every site is responsive, accessible and up to date with modern standards.</li>
-					</ul>
-				</li>
-				<li>
-					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-41.299249,174.781942&markers=-41.299249,174.781942&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-41.299249,174.781942&markers=-41.299249,174.781942&zoom=10&size=180x100&sensor=false">
-					</div>
-					<h3>Heyday</h3>
-					<p>Wellington, New Zealand</p>
-					<p><em>October 2012</em></p>
-					<ul>
-						<li class="fa-wrench">Got asked to be part of the team to realize a webshop and experience site for a local warehouse as a Front-End Web Developer. I did HTML, CSS &amp; JavaScript.</li>
-					</ul>
-				</li>
-				<li>
-					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-36.863947,174.747265&markers=-36.863947,174.747265&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-36.863947,174.747265&markers=-36.863947,174.747265&zoom=10&size=180x100&sensor=false">
-					</div>
-					<h3>BKA	Interactive</h3>
-					<p>Wellington, New Zealand</p>
-					<p><em>June	2012 - August	2012</em></p>
-					<ul>
-						<li class="fa-wrench">Realized and maintained various sites as a Front-End Web Developer. I did HTML, CSS &amp; JavaScript.</li>
-					</ul>
-				</li>
-				<li>
-					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-36.92103,174.820847&markers=-36.92103,174.820847&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-36.92103,174.820847&markers=-36.92103,174.820847&zoom=10&size=180x100&sensor=false">
-					</div>
-					<h3>World Vision</h3>
-					<p>Auckland, New Zealand</p>
-					<p><em>April 2012 - June 2012</em></p>
-					<ul>
-						<li class="fa-wrench">Helped out with various sites as a Front-End Web Developer. I did HTML, CSS &amp; JavaScript. Also did some Back-End to couple with their CMS Umbraco.</li>
-					</ul>
-				</li>
-				<li>
-					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-36.84755,174.744668&markers=-36.84755,174.744668&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=-36.84755,174.744668&markers=-36.84755,174.744668&zoom=10&size=180x100&sensor=false">
-					</div>
-					<h3>Colenso BBDO </h3>
-					<p>Auckland, New Zealand</p>
-					<p><em>October 2012</em></p>
-					<ul>
-						<li class="fa-wrench">Helped out with various sites as a Front-End Web Developer. I did HTML, CSS &amp; JavaScript. Also created some newsletters using online services.</li>
-					</ul>
-				</li>
-				<li>
-					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=51.902566,4.459224&markers=51.902566,4.459224&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=51.902566,4.459224&markers=51.902566,4.459224&zoom=10&size=180x100&sensor=false">
-					</div>
-					<h3>IN10 Communications</h3>
-					<p>Rotterdam, the Netherlands</p>
-					<p><em>June 2008 – January 2012 </em></p>
-					<ul>
-						<li class="fa-wrench">Here I developed web projects using techniques such as CSS3, HTML5, PHP, Papervision3D, Sandy, Away3D, FLARToolkit, AJAX but generally Actionscript 3.0. We're constantly learning API's like Facebook, Flickr, Twitter etc.<br>
-						Also the occasional Motion Graphics work using After Effects.<br>
-						I also completed a 5 months internship during which I researched how Augmented Reality could be used as a new digital medium in marketing campaigns.</li>
-					</ul>
-				</li>
-				<li>
-					<div class="location">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=52.401329,4.89296&markers=52.401329,4.89296&zoom=2&size=180x100&sensor=false">
-						<img src="http://maps.googleapis.com/maps/api/staticmap?center=52.401329,4.89296&markers=52.401329,4.89296&zoom=10&size=180x100&sensor=false">
-					</div>
-					<h3>MTV Networks</h3>
-					<p>Amsterdam, the Netherlands</p>
-					<p><em>September 2007 – January 2008</em></p>
-					<ul>
-						<li class="fa-wrench">During my 5 months internship I researched Interaction Design. Day to day activity included making flash banners, news letters and short running campaign sites for international brands like MTV, Comedy Central and Nickelodeon.</li>
-					</ul>
-				</li>
+					<h3>{{agency.title}}</h3>
+					<p class="agency-location fa fa-map-marker"><span>{{agency.location}}</span></p>
+					<p class="agency-date fa fa-calendar"><em>{{agency.date}}</em></p>
+					<p class="agency-description fa fa-wrench"><span ng-bind-html="agency.description"></span></p>
+        </li>
+        
+      </ul>
 		</section>
 		<section>
 			<h2>Education</h2>

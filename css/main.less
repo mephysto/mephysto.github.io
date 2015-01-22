@@ -61,7 +61,7 @@ textarea {
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
-// @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Arvo:400,700);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Arvo:400,700);
 
 .HeadingFont{
 	font-family: 'Arvo', sans-serif, Helvetica, Helvetica Neue, Arial;
@@ -463,6 +463,29 @@ a, a:visited{
 	}
 }
 
+.work-more-info{
+	cursor: pointer;
+	padding-left: 2em;
+	span{
+		font-size: 1.25em;
+		font-style: italic;
+		/* text-align: right; */
+		display: block;
+		text-decoration: underline;
+	}
+	p{
+		display: none;
+	}
+	&:hover{
+		span{
+			display: none;
+		}
+		p{
+			display: block;
+		}
+	}
+}
+
 @import "page-resume.less";
 
 .footer-container{
@@ -500,33 +523,39 @@ a, a:visited{
 }
 .footer-like {
 	float: right;
-	background: #FFFFFF;
-	width: 20px;
+	width: 200px;
 	height: 20px;
 	display: inline-block;
-	text-align: center;
+	text-align: right;
 	margin: 0 10px 0 0;
-	border-radius: 2px;
 	position: relative;
 	p {
+		background: #FFFFFF;
 		line-height: 20px;
 		color: #2222ca;
 		margin: 0;
-		padding: 0;
+		padding: 0 5px;
+	border-radius: 2px;
 		> span {
 			display: none;
 		}
 	}
 	iframe{
-		border: none;
-		overflow: hidden;
 		position: absolute;
 		bottom: 0;
 		right: 0;
 		display: none;
-		min-height: 50px;
 		box-sizing: content-box;
-		padding: 20px 0 0 20px;
+		max-width: 200px;
+		min-height: 20px;
+
+
+		border: none;
+		overflow: hidden;
+		background: #FFF;
+		padding: 6px;
+		border-radius: 2px;
+		// margin-bottom: 40px;
 	}
 	&:hover iframe{
 		display: block;

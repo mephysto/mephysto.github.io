@@ -1,0 +1,92 @@
+[
+	{
+		"title" : "Lululemon Athletica",
+		"location" : "Vancouver, Canada",
+		"geo" : {
+			"x" : 49.2714618,
+			"y" : -123.146587
+		},
+		"date" : "September 2014 – November 2014",
+		"description" : "Lululemon athletica is a yoga-inspired athletic apperal company, with stores worldwide. For this project I was brought in to work on a digital magazine. The HTML/CSS/JS were made so it would fit in their custom templating system."
+	},
+	{
+		"title" : "FCV Interactive",
+		"location" : "Vancouver, Canada",
+		"geo" : {
+			"x" : 49.2852102,
+			"y" : -123.1123021
+		},
+		"date" : "June 2014",
+		"description" : "Got brought on board to work on maintenance work on British Columbia tourism sites. These were HTML/CSS/JS updates and some bugfixes on Kentico templates. Mentionable technologies used: Grunt.js to test, compile, and build the site."
+	},
+	{
+		"title" : "Longtail",
+		"location" : "Perth, Australia",
+		"geo" : {
+			"x" : -31.949973,
+			"y" : 115.844871
+		},
+		"date" : "February 2013 – April 2014",
+		"description" : "Worked as a Front End Web Developer doing CSS, HTML and JavaScript. While at the same time keeping up to date with trending technologies. Making sure every site is responsive, accessible and up to date with modern standards."
+	},
+	{
+		"title" : "Heyday",
+		"location" : "Wellington, New Zealand",
+		"geo" : {
+			"x" : -41.299249,
+			"y" : 174.781942
+		},
+		"date" : "October 2012",
+		"description" : "Got asked to be part of the team to realize a webshop and experience site for a local warehouse as a Front-End Web Developer. I did HTML, CSS & JavaScript."
+	},
+	{
+		"title" : "BKA Interactive",
+		"location" : "Wellington, New Zealand",
+		"geo" : {
+			"x" : -36.863947,
+			"y" : 174.747265
+		},
+		"date" : "June 2012 - August 2012",
+		"description" : "Realized and maintained various sites as a Front-End Web Developer. I did HTML, CSS & JavaScript."
+	},
+	{
+		"title" : "World Vision",
+		"location" : "Auckland, New Zealand",
+		"geo" : {
+			"x" : -36.92103,
+			"y" : 174.820847
+		},
+		"date" : "April 2012 - June 2012",
+		"description" : "Helped out with various sites as a Front-End Web Developer. I did HTML, CSS &amp; JavaScript. Also did some Back-End to couple with their CMS Umbraco."
+	},
+	{
+		"title" : "Colenso BBDO",
+		"location" : "Auckland, New Zealand",
+		"geo" : {
+			"x" : -36.84755,
+			"y" : 174.744668
+		},
+		"date" : "October 2012",
+		"description" : "Helped out with various sites as a Front-End Web Developer. I did HTML, CSS &amp; JavaScript. Also created some newsletters using online services."
+	},
+	{
+		"title" : "IN10 Communications",
+		"location" : "Rotterdam, the Netherlands",
+		"geo" : {
+			"x" : 51.902566,
+			"y" : 4.459224
+		},
+		"date" : "June 2008 – January 2012",
+		"description" : "Here I developed web projects using techniques such as CSS3, HTML5, PHP, Papervision3D, Sandy, Away3D, FLARToolkit, AJAX but generally Actionscript 3.0. And also the occasional Motion Graphics work using After Effects.<br>I also completed a 5 month internship during which I researched how Augmented Reality could be used as a new digital medium in marketing campaigns."
+	},
+	{
+		"title" : "MTV Networks",
+		"location" : "Amsterdam, the Netherlands",
+		"geo" : {
+			"x" : 52.401329,
+			"y" : 4.89296
+		},
+		"date" : "September 2007 – January 2008",
+		"description" : "During my 5 months internship I researched Interaction Design. Day to day activity included making flash banners, news letters and short running campaign sites for international brands like MTV, Comedy Central and Nickelodeon."
+	}
+]

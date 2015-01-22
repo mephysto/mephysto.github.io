@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Arvo:400,700);
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 @-webkit-keyframes btnEnter {
   0% {
@@ -2125,6 +2126,27 @@ a:visited {
 .content-work .moreprojects a:hover {
   text-decoration: underline;
 }
+.work-more-info {
+  cursor: pointer;
+  padding-left: 2em;
+}
+.work-more-info span {
+  font-size: 1.25em;
+  font-style: italic;
+  /* text-align: right; */
+
+  display: block;
+  text-decoration: underline;
+}
+.work-more-info p {
+  display: none;
+}
+.work-more-info:hover span {
+  display: none;
+}
+.work-more-info:hover p {
+  display: block;
+}
 /* RESUME */
 .content-resume {
   background: #FFFFFF;
@@ -2243,8 +2265,8 @@ a:visited {
   padding: 0;
 }
 .content-resume section.agencies > ul > li {
-  margin: 0 0 15px 20px;
-  padding-bottom: 15px;
+  margin: 0 0 15px;
+  padding: 0 0 15px 10px;
   border-bottom: 1px solid #aaa;
   min-height: 116px;
 }
@@ -2255,7 +2277,9 @@ a:visited {
   margin: 0 0 5px 0;
 }
 .content-resume section.agencies > ul > li p {
-  margin: 0;
+  margin: 0 0 0 0.5em;
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 .content-resume section.agencies > ul > li p em {
   font-size: 0.9em;
@@ -2276,6 +2300,9 @@ a:visited {
 .content-resume section.agencies > ul > li > ul > li em {
   font-size: 0.9em;
 }
+.content-resume section.agencies .fa::before {
+  margin-right: 0.25em;
+}
 .content-resume section.onlineprofiles a {
   line-height: 2em;
   text-decoration: none;
@@ -2295,6 +2322,12 @@ a:visited {
 }
 .content-resume section.onlineprofiles a i {
   margin-right: 4px;
+}
+.agency-location::before {
+  margin-left: 0.25em;
+}
+.agency-description {
+  display: block;
 }
 .resume-picture {
   float: right;
@@ -2353,34 +2386,37 @@ a:visited {
 }
 .footer-like {
   float: right;
-  background: #FFFFFF;
-  width: 20px;
+  width: 200px;
   height: 20px;
   display: inline-block;
-  text-align: center;
+  text-align: right;
   margin: 0 10px 0 0;
-  border-radius: 2px;
   position: relative;
 }
 .footer-like p {
+  background: #FFFFFF;
   line-height: 20px;
   color: #2222ca;
   margin: 0;
-  padding: 0;
+  padding: 0 5px;
+  border-radius: 2px;
 }
 .footer-like p > span {
   display: none;
 }
 .footer-like iframe {
-  border: none;
-  overflow: hidden;
   position: absolute;
   bottom: 0;
   right: 0;
   display: none;
-  min-height: 50px;
   box-sizing: content-box;
-  padding: 20px 0 0 20px;
+  max-width: 200px;
+  min-height: 20px;
+  border: none;
+  overflow: hidden;
+  background: #FFF;
+  padding: 6px;
+  border-radius: 2px;
 }
 .footer-like:hover iframe {
   display: block;
@@ -2433,8 +2469,7 @@ a:visited {
   }
   .content-work .text,
   .content-work .image {
-    float: left;
-    width: 50%;
+    margin: 0 10% 10px;
   }
   /* ============
   	WIDE: Menu
