@@ -2018,7 +2018,7 @@ a:visited {
 }
 .work-more-info {
   cursor: pointer;
-  padding-left: 2em;
+  padding-left: 1em;
 }
 .work-more-info span {
   font-size: 1.25em;
@@ -2029,9 +2029,9 @@ a:visited {
   text-decoration: underline;
 }
 .work-more-info p {
-  display: none;
+  font-size: 1.25em;
 }
-.work-more-info:hover span {
+.work-more-info span {
   display: none;
 }
 .work-more-info:hover p {
@@ -2249,6 +2249,9 @@ p.client-description {
 .resume-skills li {
   font-size: 1.25em;
   line-height: 1.5em;
+}
+.resume-skills li::before {
+  margin-right: 0.25em;
 }
 .footer-container {
   background: #000000;
