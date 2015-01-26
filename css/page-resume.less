@@ -97,7 +97,7 @@
 			opacity: 1;
 		};
 	}
-	section.intro, section.resume-skills{
+	section.intro, section.resume-skills, section.education, section.references{
 		ul{
 			padding: 0 0 0 1.75em;
 			margin: 0.5em 0 0 0;
@@ -110,7 +110,6 @@
 	}
 	section.agencies{
 		> ul{
-			list-style: none;
 			padding: 0;
 			> li{
 				margin: 0 0 15px;
@@ -171,7 +170,7 @@
 
 	}
 }
-.client{
+.agencies, .education, .references{
 	h3{
 		margin: 0 0 5px 0;
 	}
@@ -181,6 +180,14 @@
 		line-height: 1.5em;
 		em{
 			font-size: 0.9em;
+		}
+	}
+	ul{
+		list-style: none;
+		.fa{
+			&:before{
+				margin-right: 0.25em;
+			}
 		}
 	}
 }
