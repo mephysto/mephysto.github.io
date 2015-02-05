@@ -117,7 +117,7 @@ module.exports = function(grunt) {
   /// imagmin is broken. need to find out how to fix.
 
   /* ## Build site */
-  grunt.registerTask('default', ['less', 'autoprefixer', 'uglify', 'imagemin']);
+  grunt.registerTask('build', ['less', 'autoprefixer', 'uglify', 'imagemin']);
 
   // start watching for changes in LESS
   grunt.registerTask('watchstyles', ['less', 'autoprefixer', 'watch:styles']);
@@ -126,6 +126,7 @@ module.exports = function(grunt) {
   // start watching for changes in image folder
   grunt.registerTask('watchimages', ['imagemin', 'watch:images']);
   // watch everything
-  grunt.registerTask('watchall', ['default', 'watch']);
+  grunt.registerTask('watchall', ['build', 'watch']);
+  grunt.registerTask('default', ['watchall']);
 
 };
