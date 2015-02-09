@@ -2219,6 +2219,9 @@ a:visited {
 .content-work section {
   border-top: 1px solid #444444;
   padding: 15px 0;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 .content-work section.intro {
   border: none;
@@ -2240,6 +2243,8 @@ a:visited {
 }
 .content-work .text {
   padding: 0 10px 0 0;
+  -webkit-transform: rotateX(0deg) rotateY(21deg) translate3d(0px, 0px, 0px);
+  background: #FFFFFF;
 }
 .content-work .text > a {
   display: block;
@@ -2255,6 +2260,8 @@ a:visited {
   text-decoration: underline;
 }
 .content-work .image {
+  -webkit-transform: rotateX(0deg) rotateY(-21deg) translate3d(0px, 0px, 0px);
+  display: block;
   text-align: right;
   padding: 15px 0 15px 15px;
   background-repeat: no-repeat;
@@ -2275,7 +2282,6 @@ a:visited {
   text-decoration: underline;
 }
 .work-more-info {
-  cursor: pointer;
   padding-left: 1em;
 }
 .work-more-info span {

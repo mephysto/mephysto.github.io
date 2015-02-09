@@ -13,17 +13,16 @@
     <section class="clearfix" ng-repeat="client in work">
     	<div class="text">
 				<h2>{{client.title}}</h2>
-				<a ng-href="{{client.externalLink}}" target="_blank">{{client.externalLinkName}}<i class="fa fa-external-link"></i></a>
-				<!-- <p>{{client.shortdescription}}</p> -->
 				<p ng-bind-html="client.shortdescription"></p>
 				<div class="work-more-info">
 					<span>more info</span>
 					<p ng-repeat="paragraph in client.longdescription" ng-bind-html="paragraph"></p>
 				</div>
+				<a ng-href="{{client.externalLink}}" target="_blank">{{client.externalLinkName}}<i class="fa fa-external-link"></i></a>
 			</div>
-			<div class="image clearfix" style="background-image:url('{{client.image}}')">
+			<a ng-href="{{client.externalLink}}" target="_blank" class="image clearfix" style="background-image:url('{{client.image}}')">
 				<img src="{{client.image}}">
-			</div>
+			</a>
 
     </section>
 
