@@ -41,7 +41,8 @@ var MEPHYSTO = MEPHYSTO || {
 	    if (window.DeviceMotionEvent !== undefined && (navigator.userAgent.search("Firefox") >= 0) === false) {
 	    	// register device motions
 	    	MEPHYSTO.targetElement = document.getElementById('maincard');
-				window.ondevicemotion = MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay);
+				// window.ondevicemotion = MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay);
+				window.addEventListener('deviceorientation', MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay));
 	    } else{
 	    	// we can't, use mousemove instead
 				$( ".main-container" ).mousemove(MEPHYSTO.throttle(MEPHYSTO.onMouseMove, MEPHYSTO.delay));
@@ -70,8 +71,11 @@ var MEPHYSTO = MEPHYSTO || {
 	},
 	// calculate tilting of landing card based on device tiltage
 	onDeviceMotion : function(e){
-		MEPHYSTO.ax = e.accelerationIncludingGravity.x;
-		MEPHYSTO.ay = e.accelerationIncludingGravity.y;
+
+		MEPHYSTO.ax = e.beta;
+		MEPHYSTO.ay = e.gamma;
+		// MEPHYSTO.ax = e.accelerationIncludingGravity.x;
+		// MEPHYSTO.ay = e.accelerationIncludingGravity.y;
 		// NYI: we're not using velocity yet
 		// MEPHYSTO.vy = MEPHYSTO.vy + -(MEPHYSTO.ay);
 		// MEPHYSTO.vx = MEPHYSTO.vx + MEPHYSTO.ax;
