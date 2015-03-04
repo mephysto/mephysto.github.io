@@ -79,7 +79,6 @@ textarea {
 body {
   font: 10px 'Droid Sans', sans-serif, Helvetica, Helvetica Neue, Arial;
   -webkit-transform: translateZ(-200px);
-  -ms-transform: translateZ(-200px);
   transform: translateZ(-200px);
 }
 h1,
@@ -1917,7 +1916,6 @@ h3 {
 }
 .main-container.ng-enter,
 .main-container.ng-leave {
-  -webkit-transition: 250ms linear all;
   transition: 250ms linear all;
 }
 .main-container.ng-enter {
@@ -1933,7 +1931,6 @@ h3 {
   opacity: 0;
 }
 * {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 body,
@@ -2022,12 +2019,10 @@ a:visited {
 }
 .main-container {
   -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-perspective: 700px;
   /* Chrome, Safari, Opera  */
   /* Chrome, Safari, Opera  */
-  -ms-perspective: 700px;
   perspective: 700px;
   /* Chrome, Safari, Opera  */
   height: 100%;
@@ -2038,10 +2033,9 @@ a:visited {
 }
 /* LANDING */
 .landing-card {
-  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
   transition: transform 1s ease-out;
   -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
   width: 700px;
   height: 500px;
@@ -2051,15 +2045,14 @@ a:visited {
   margin-left: -350px;
   margin-top: -250px;
   -webkit-transform: translate3d(0, 0, 1000px);
-  -ms-transform: translate3d(0, 0, 1000px);
   transform: translate3d(0, 0, 1000px);
   -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .landing-card.active {
   -webkit-transform: translate3d(0, 0, 0px);
-  -ms-transform: translate3d(0, 0, 0px);
   transform: translate3d(0, 0, 0px);
 }
 .landing-card-shadow {
@@ -2073,7 +2066,6 @@ a:visited {
   top: 0;
   left: 0;
   -webkit-transform: translate3d(0, 0, -200px);
-  -ms-transform: translate3d(0, 0, -200px);
   transform: translate3d(0, 0, -200px);
 }
 .landing-card-background {
@@ -2085,7 +2077,6 @@ a:visited {
   background: url(../img/build/card-bg.png) no-repeat center center;
   background-size: contain;
   -webkit-transform: translate3d(0, 0, -25px);
-  -ms-transform: translate3d(0, 0, -25px);
   transform: translate3d(0, 0, -25px);
 }
 .landing-card-content {
@@ -2098,10 +2089,8 @@ a:visited {
   width: 340px;
   height: 200px;
   -webkit-transform: translate3d(0, 0, 0px);
-  -ms-transform: translate3d(0, 0, 0px);
   transform: translate3d(0, 0, 0px);
   -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .landing-card-content h1 {
@@ -2116,10 +2105,8 @@ a:visited {
   top: -180px;
   left: -130px;
   -webkit-transform: translate3d(0, 0, -10px);
-  -ms-transform: translate3d(0, 0, -10px);
   transform: translate3d(0, 0, -10px);
   -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .landing-card-content h1::before {
@@ -2129,7 +2116,6 @@ a:visited {
   display: block;
   position: absolute;
   -webkit-transform: translate3d(-10px, 10px, -40px);
-  -ms-transform: translate3d(-10px, 10px, -40px);
   transform: translate3d(-10px, 10px, -40px);
   background: url(../img/build/logo-triangle.svg) no-repeat;
   background-size: contain;
@@ -2141,7 +2127,6 @@ a:visited {
   font-weight: normal;
   text-align: right;
   -webkit-transform: translateZ(5px);
-  -ms-transform: translateZ(5px);
   transform: translateZ(5px);
 }
 .landing-card-content p {
@@ -2161,16 +2146,14 @@ a:visited {
   background: #FFF;
   color: #000000;
   margin-bottom: 10px;
-  -webkit-transition: -webkit-transform 100ms ease-out;
+  transition: -webkit-transform 100ms ease-out;
   transition: transform 100ms ease-out;
   text-decoration: none;
   -webkit-transform: translateZ(0px);
-  -ms-transform: translateZ(0px);
   transform: translateZ(0px);
 }
 .landing-card-content a:hover {
   -webkit-transform: translateZ(35px);
-  -ms-transform: translateZ(35px);
   transform: translateZ(35px);
 }
 .landing-card-content a i {
@@ -2220,7 +2203,6 @@ a:visited {
   border-top: 1px solid #444444;
   padding: 15px 0;
   -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .content-work section.intro {
@@ -2377,7 +2359,6 @@ a:visited {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all 500ms;
   transition: all 500ms;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -2454,7 +2435,6 @@ a:visited {
   padding: 0px 10px;
   display: inline-block;
   margin-right: 5px;
-  -webkit-transition: background 500ms ease-out;
   transition: background 500ms ease-out;
 }
 .content-resume section.onlineprofiles a:hover {
@@ -2590,7 +2570,6 @@ p.client-description {
   bottom: 0;
   right: 0;
   display: none;
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   max-width: 200px;
   min-height: 20px;
@@ -2611,7 +2590,6 @@ p.client-description {
     -webkit-perspective: 700px;
     /* Chrome, Safari, Opera  */
     /* Chrome, Safari, Opera  */
-    -ms-perspective: 700px;
     perspective: 700px;
     /* Chrome, Safari, Opera  */
   }
@@ -2620,7 +2598,6 @@ p.client-description {
     -ms-perspective: 700px;
     perspective: 700px;
     -webkit-transform: translateZ(-500px);
-    -ms-transform: translateZ(-500px);
     transform: translateZ(-500px);
   }
   .location {

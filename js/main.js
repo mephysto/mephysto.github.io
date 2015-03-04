@@ -38,11 +38,11 @@ var MEPHYSTO = MEPHYSTO || {
 		// TODO: Update these listeners when moving back to landingpage, after visitor starts the sesh on any other page
 		if(MEPHYSTO.checkState('landing')){
 			// if browser doesn't support devicemotion evnts use mouse location instead. Firefox somehow supports it but is being a butt about it.
-	    if (window.DeviceMotionEvent !== undefined && (navigator.userAgent.search("Firefox") >= 0) === false) {
+	    if (Modernizr.touch) {
 	    	// register device motions
 	    	MEPHYSTO.targetElement = document.getElementById('maincard');
-				// window.ondevicemotion = MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay);
-				window.addEventListener('deviceorientation', MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay));
+				window.ondevicemotion = MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay);
+				// window.addEventListener('deviceorientation', MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay));
 	    } else{
 	    	// we can't, use mousemove instead
 				$( ".main-container" ).mousemove(MEPHYSTO.throttle(MEPHYSTO.onMouseMove, MEPHYSTO.delay));
@@ -72,15 +72,15 @@ var MEPHYSTO = MEPHYSTO || {
 	// calculate tilting of landing card based on device tiltage
 	onDeviceMotion : function(e){
 
-		MEPHYSTO.ax = e.beta;
-		MEPHYSTO.ay = e.gamma;
-		// MEPHYSTO.ax = e.accelerationIncludingGravity.x;
-		// MEPHYSTO.ay = e.accelerationIncludingGravity.y;
+		// MEPHYSTO.ax = e.beta;
+		// MEPHYSTO.ay = e.gamma;
+		MEPHYSTO.ax = e.accelerationIncludingGravity.x;
+		MEPHYSTO.ay = e.accelerationIncludingGravity.y;
 		// NYI: we're not using velocity yet
 		// MEPHYSTO.vy = MEPHYSTO.vy + -(MEPHYSTO.ay);
 		// MEPHYSTO.vx = MEPHYSTO.vx + MEPHYSTO.ax;
-		MEPHYSTO.x = parseInt(MEPHYSTO.ay * 5);
-		MEPHYSTO.y = parseInt(MEPHYSTO.ax * 10);
+		MEPHYSTO.x = parseInt(MEPHYSTO.ay * .5);
+		MEPHYSTO.y = parseInt(MEPHYSTO.ax * .10);
 		MEPHYSTO.tiltLandingCard(MEPHYSTO.x, MEPHYSTO.y);
 	},
 	// tilt the landing card

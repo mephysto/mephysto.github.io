@@ -1,8 +1,8 @@
 # Mac.
 .DS_STORE
 
-# Node.
-node_modules
+# Node
+node_modules/**
 npm-debug.log
 
 #pdf
