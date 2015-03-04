@@ -38,9 +38,9 @@ var MEPHYSTO = MEPHYSTO || {
 		// TODO: Update these listeners when moving back to landingpage, after visitor starts the sesh on any other page
 		if(MEPHYSTO.checkState('landing')){
 			// if browser doesn't support devicemotion evnts use mouse location instead. Firefox somehow supports it but is being a butt about it.
+	    MEPHYSTO.targetElement = document.getElementById('maincard');
 	    if (Modernizr.touch) {
 	    	// register device motions
-	    	MEPHYSTO.targetElement = document.getElementById('maincard');
 				window.ondevicemotion = MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay);
 				// window.addEventListener('deviceorientation', MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay));
 	    } else{
