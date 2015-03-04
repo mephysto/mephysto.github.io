@@ -1,9 +1,25 @@
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# node-waf configuration
+.lock-wscript
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
 # Mac.
 .DS_STORE
-
-# Node
-node_modules/**
-npm-debug.log
 
 #pdf
 Maurice_Melchers_-_resume.pdf
