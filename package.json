@@ -1,7 +1,7 @@
 {
   "name": "MEPHYSTO",
   "version": "0.1.0",
-  "author": "###",
+  "author": "Maurice Melchers",
   "description": "###",
   "contributors": [
     {
@@ -11,16 +11,13 @@
   ],
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-autoprefixer": "^0.7.2",
     "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-less": "^1.0.0",
-    "grunt-contrib-watch": "^0.6.0",
-    "jpegtran-bin": "0.2.0",
-    "http-server": "^0.6.1",
     "grunt-contrib-imagemin": "^0.2.0",
-    "grunt-autoprefixer": "^0.7.2"
-  },
-  "scripts": {
-    "start": "http-server -p 8000"
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "^0.6.0",
+    "grunt-newer": "^1.1.1",
+    "jpegtran-bin": "0.2.0"
   }
 }
