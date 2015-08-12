@@ -39,14 +39,7 @@ var MEPHYSTO = MEPHYSTO || {
 		if(MEPHYSTO.checkState('landing')){
 			// if browser doesn't support devicemotion evnts use mouse location instead. Firefox somehow supports it but is being a butt about it.
 	    MEPHYSTO.targetElement = document.getElementById('maincard');
-	    if (Modernizr.touch) {
-	    	// register device motions
-				window.ondevicemotion = MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay);
-				// window.addEventListener('deviceorientation', MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay));
-	    } else{
-	    	// we can't, use mousemove instead
-				$( ".main-container" ).mousemove(MEPHYSTO.throttle(MEPHYSTO.onMouseMove, MEPHYSTO.delay));
-	    }
+			$( ".main-container" ).mousemove(MEPHYSTO.throttle(MEPHYSTO.onMouseMove, MEPHYSTO.delay));
 		};
 		/* Button hover sound effect */
     $('.btnLightning').mouseenter(function(){MEPHYSTO.sfx.getRandom().play()});
