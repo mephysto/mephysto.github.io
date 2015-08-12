@@ -1,5 +1,15 @@
 [
 	{
+		"title" : "Red Tiki",
+		"location" : "Perth, Australia",
+		"geo" : {
+			"x" : -31.9419322,
+			"y" : 115.8334663
+		},
+		"date" : "February 2015 – Current",
+		"description" : "A quirky little web design studio in Perth, Australia. I got brought on board to help out with their front-end projects. The prefered weapon of managing content was Silverstripe, which was surprisingly easy to pick up. A pretty laid back agency with its own Tikibar and the best Friday afternoon cocktail hours."
+	},
+	{
 		"title" : "Lululemon Athletica",
 		"location" : "Vancouver, Canada",
 		"geo" : {
