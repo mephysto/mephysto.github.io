@@ -1,6 +1,7 @@
 [
 	{
 		"title" : "Red Tiki",
+		"link": "http://www.redtiki.com.au",
 		"location" : "Perth, Australia",
 		"geo" : {
 			"x" : -31.9419322,
@@ -11,6 +12,7 @@
 	},
 	{
 		"title" : "Lululemon Athletica",
+		"link": "http://www.lululemon.com",
 		"location" : "Vancouver, Canada",
 		"geo" : {
 			"x" : 49.2714618,
@@ -21,6 +23,7 @@
 	},
 	{
 		"title" : "FCV Interactive",
+		"link": "http://www.fcv.ca/",
 		"location" : "Vancouver, Canada",
 		"geo" : {
 			"x" : 49.2852102,
@@ -31,6 +34,7 @@
 	},
 	{
 		"title" : "Longtail",
+		"link": "http://www.longtail.com.au/",
 		"location" : "Perth, Australia",
 		"geo" : {
 			"x" : -31.949973,
@@ -41,6 +45,7 @@
 	},
 	{
 		"title" : "Heyday",
+		"link": "http://heyday.co.nz/",
 		"location" : "Wellington, New Zealand",
 		"geo" : {
 			"x" : -41.299249,
@@ -51,6 +56,7 @@
 	},
 	{
 		"title" : "BKA Interactive",
+		"link": "http://www.bka.co.nz/",
 		"location" : "Wellington, New Zealand",
 		"geo" : {
 			"x" : -36.863947,
@@ -61,6 +67,7 @@
 	},
 	{
 		"title" : "World Vision",
+		"link": "https://www.worldvision.org.nz/",
 		"location" : "Auckland, New Zealand",
 		"geo" : {
 			"x" : -36.92103,
@@ -71,6 +78,7 @@
 	},
 	{
 		"title" : "Colenso BBDO",
+		"link": "http://www.colensobbdo.co.nz/",
 		"location" : "Auckland, New Zealand",
 		"geo" : {
 			"x" : -36.84755,
@@ -81,6 +89,7 @@
 	},
 	{
 		"title" : "IN10 Communications",
+		"link": "http://www.in10.nl/",
 		"location" : "Rotterdam, the Netherlands",
 		"geo" : {
 			"x" : 51.902566,
@@ -91,6 +100,7 @@
 	},
 	{
 		"title" : "MTV Networks",
+		"link": "http://www.mtv.nl",
 		"location" : "Amsterdam, the Netherlands",
 		"geo" : {
 			"x" : 52.401329,

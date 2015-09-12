@@ -8,7 +8,7 @@
 				<img src="img/build/maurice-melchers-profile.jpg" alt="Profile picture of Maurice Melchers" class="hidden">
 			</div>
 			<ul class="resume-overview">
-				<li class="fa fa-check">Front-end web developer with over 6 years of professional experience.</li>
+				<li class="fa fa-check">Front-end web developer with over 8 years of professional experience.</li>
 				<li class="fa fa-check">Primary focus on front-end web site development.</li>
 				<li class="fa fa-check">Experience in Interaction Design, UX, and Motion Graphics.</li>
 			</ul>
@@ -18,7 +18,7 @@
 			<ul>
 				<li class="fa fa-key">Design &dash; <em>Wireframing, Rapid Prototyping, Interaction Design, UX Design, Motion Design.</em></li>
 				<li class="fa fa-key">Front-End &dash; <em>Front-end:	HTML5, CSS3, SCSS/LESS, JavaScript, SEO, Accessibility, Responsive, Cross-browser compatibility, PHP, Flash Actionscript 3.0.</em></li>
-				<li class="fa fa-key">Frameworks/API's &dash; <em>Node.js, Grunt, jQuery, Angular, Backbone, Bootstrap, Google Maps, Facebook / Twitter.</em></li> 
+				<li class="fa fa-key">Frameworks/API's &dash; <em>LESS, SASS, Node.js, Grunt, jQuery, Angular, Backbone, Bootstrap, Google Maps, Facebook / Twitter.</em></li> 
 				<li class="fa fa-key">Software &dash; <em>Photoshop, Illustrator, After Effects, Flash, Axure, Word, Excel, <abbr title="Subversion">SVN</abbr>, Github, Silverstripe, Wordpress.</em></li>
 				<li class="fa fa-key">Other skills &dash; <em>Version Control (<abbr title="Subversion">SVN</abbr> and GIT). Can work on either Mac or PC.</em></li>
 			</ul>
@@ -32,7 +32,7 @@
 						<img src="http://maps.googleapis.com/maps/api/staticmap?center={{client.geo.x}},{{client.geo.y}}&markers={{client.geo.x}},{{client.geo.y}}&zoom=2&size=180x100&sensor=false">
 						<img src="http://maps.googleapis.com/maps/api/staticmap?center={{client.geo.x}},{{client.geo.y}}&markers={{client.geo.x}},{{client.geo.y}}&zoom=10&size=180x100&sensor=false">
 					</div>
-					<h3 class="client-name fa fa-briefcase">{{client.title}}</h3>
+					<h3 class="client-name fa fa-briefcase"><a href="{{client.link}}" target="_blank">{{client.title}}</a></h3>
 					<p class="client-description fa fa-wrench"><span ng-bind-html="client.description"></span></p>
 					<p class="client-location fa fa-map-marker"><span>{{client.location}}</span></p>
 					<p class="client-date fa fa-calendar"><em>{{client.date}}</em></p>
