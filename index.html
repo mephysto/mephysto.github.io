@@ -73,6 +73,21 @@ Z?MMMMMMMMMM....... MMM....7....MMMM+
 	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 </head>
 <body ng-class="'state-' + (state | lowercase)">
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+	 <defs>
+		 <filter id="squiglyfilter">
+			 <feTurbulence result="TURBULENCE" baseFrequency="0.08" numOctaves="1" seed="1">
+				 <animate id="filter-5--anim"
+									from="1" to="10"
+									attributeType="XML"
+									attributeName="seed"
+									dur="250ms"
+									repeatCount="indefinite"/>
+				 </feTurbulence>
+				 <feDisplacementMap in="SourceGraphic" in2="TURBULENCE" scale="10" />
+			 </filter>
+	 </defs>
+	</svg>
 	<div class="header-container">
 		<header class="wrapper clearfix">
 			<a href="./"><h1 class="title">Maurice Melchers</h1></a>

@@ -2055,6 +2055,7 @@ a:visited {
   -webkit-animation: btnStar 150ms infinite ease;
   -moz-animation: btnStar 150ms infinite ease;
   -o-animation: btnStar 150ms infinite ease;
+  -webkit-filter: url(#squiglyfilter);
 }
 .main-container {
   -webkit-transform-style: preserve-3d;
