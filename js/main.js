@@ -31,7 +31,7 @@ var MEPHYSTO = MEPHYSTO || {
     }
 	},
 	init : function(){
-		console.info('%c Hi there! Looking to check out my unminified source files? Have a look around my Github page on https://github.com/mephysto/mephysto.github.io\n Any other questions or maybe even job offers? Mail me at contact@mauricemelchers.nl ;)', 'background: #bada55; color: #222');
+		console.info('%cHi there! Looking to check out my unminified source files? Have a look around my Github page on https://github.com/mephysto/mephysto.github.io\n Any other questions or opportunities? Send me a mail me at contact@mauricemelchers.nl ;)', 'background: #bada55; color: #222');
 
 		/* Move the card on the landing page on mouse move / device tilt */
 
