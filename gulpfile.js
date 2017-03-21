@@ -15,7 +15,7 @@ const gulp = require('gulp'),
 gulp.task('sass', function () {
   gulp.src('scss/main.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({browsers: ['last 2 versions', 'IE <= 10'], cascade: true }))
     .pipe(rename("global.min.css"))
     .pipe(sourcemaps.write('./'))
