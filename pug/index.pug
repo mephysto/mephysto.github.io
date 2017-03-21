@@ -6,7 +6,6 @@ html.no-js(prefix='og: http://ogp.me/ns#', lang='en', ng-app='mephystoApp')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     title Maurice Melchers / Front End Web Developer
     meta(name='description', content='Front end web developer Maurice Melchers.')
-    link(rel='stylesheet', href='css/normalize.min.css')
     link(rel='stylesheet', href='css/global.min.css')
     // Twitter Card data
     meta(name='twitter:card', content='summary')
@@ -69,24 +68,18 @@ html.no-js(prefix='og: http://ogp.me/ns#', lang='en', ng-app='mephystoApp')
     // #main-container
     .footer-container
       footer.wrapper
-        p ©	Maurice Melchers, 2016. 
+        p ©	Maurice Melchers, 2017. 
         p
-          a(href='https://www.linkedin.com/in/mauricemelchers', target='_blank', title='view my Linkedin profile')
+          a(href='https://www.linkedin.com/in/mauricemelchers', target='_blank', title='view my Linkedin profile').footer__social
             i.fa.fa-linkedin-square
             span my Linkedin profile
-          a(href='https://github.com/mephysto', target='_blank', title='view my Github profile')
+          a(href='https://github.com/mephysto', target='_blank', title='view my Github profile').footer__social
             i.fa.fa-github-square
             span my Github profile
-          a(href='https://twitter.com/mephysto', target='_blank', title='view my Twitter profile')
+          a(href='https://twitter.com/mephysto', target='_blank', title='view my Twitter profile').footer__social
             i.fa.fa-twitter-square
             span my Twitter profile
-          a(href='http://www.pinterest.com/mephysto/', target='_blank', title='view my Pinterest boards')
-            i.fa.fa-pinterest-square
-            span my Pinterest boards
-          a(href='http://www.facebook.com/mephysto/', target='_blank', title='view my Facebook profile')
-            i.fa.fa-facebook-square
-            span my Facebook profile
-          a(href='http://codepen.io/mephysto/', target='_blank', title='view my Codepen repository')
+          a(href='http://codepen.io/mephysto/', target='_blank', title='view my Codepen repository').footer__social
             i.fa.fa-codepen
             span my Codepen repository
         .footer-like
@@ -107,18 +100,6 @@ html.no-js(prefix='og: http://ogp.me/ns#', lang='en', ng-app='mephystoApp')
     script(src='js/angular/controllers.js')
     script(src='js/angular/services.js')
     script(src='js/build/global.min.js')
-    script(type='text/javascript').
-      WebFontConfig = {
-      google: { families: [ 'Arvo:400,700:latin', 'Droid+Sans:400,700:latin' ] }
-      };
-      (function() {
-      var wf = document.createElement('script');
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-      wf.type = 'text/javascript';
-      wf.async = 'true';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(wf, s);
-      })();
     script.
       // Github tracking
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

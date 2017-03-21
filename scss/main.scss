@@ -1,5 +1,6 @@
 /*! Mephysto */
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+@import 'normalize';
 @import 'mixins';
 
 html,
@@ -13,6 +14,8 @@ textarea {
 html {
 	font-size: 1em;
 	line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ::-moz-selection {
@@ -62,7 +65,7 @@ textarea {
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
-// @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Arvo:400,700);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Arvo:400,700);
 
 @mixin HeadingFont{
 	font-family: 'Arvo', sans-serif, Helvetica, Helvetica Neue, Arial;
@@ -74,8 +77,6 @@ textarea {
 
 body {
 	@include BodyFont;
-	-webkit-transform: translateZ( -200px );
-	-moz-transform: translateZ( -200px );
 	transform: translateZ( -200px );
 }
 h1, h2, h3{
@@ -108,10 +109,15 @@ h1, h2, h3{
 @import "fontawesome/font-awesome";
 @import "angular-animations";
 
-*{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
+html{
 	box-sizing: border-box;
+}
+* {
+	box-sizing:inherit;
+	&:before,
+	&:after {
+		box-sizing:inherit;
+	}
 }
 body, html{
 	height: 100%;
@@ -137,7 +143,6 @@ a, a:visited{
 		position: relative;
 		width: 100%;
 		margin: 0;
-		-webkit-box-shadow: 0 0 15px 5px rgba(0,0,0,0.25);
 		box-shadow: 0 0 15px 5px rgba(0,0,0,0.25);
 		h1{
 			margin: 0;
@@ -195,19 +200,13 @@ a, a:visited{
 	z-index: 9999;
 	background: url('../img/build/btn-star.png') no-repeat;
 	pointer-events: none;
-	-webkit-animation: btnStar 150ms infinite ease;
-	-moz-animation: btnStar 150ms infinite ease;
-	-o-animation: btnStar 150ms infinite ease;
-  -webkit-filter: url(#squiglyfilter);
+	animation: btnStar 150ms infinite ease;
+  filter: url(#squiglyfilter);
 }
 
 .main-container{
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-	-webkit-perspective:700px; /* Chrome, Safari, Opera  */
-	-moz-perspective:700px; /* Chrome, Safari, Opera  */
-	perspective:700px; /* Chrome, Safari, Opera  */
+	perspective:700px;
 	height: 100%;
 	padding: 50px 0 100px;
 	position: relative;
@@ -221,11 +220,7 @@ a, a:visited{
 }
 
 .landing-card{
-  -webkit-transition: -webkit-transform 1s ease-out;
-  -moz-transition: -moz-transform 1s ease-out;
   transition: transform 1s ease-out;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 	width: 700px;
 	height: 500px;
@@ -234,17 +229,9 @@ a, a:visited{
 	left: 50%;
 	margin-left: -350px;
 	margin-top: -250px;
-	-webkit-transform: translate3d(0,0,1000px);
-	-moz-transform: translate3d(0,0,1000px);
 	transform: translate3d(0,0,1000px);
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
-	-o-backface-visibility: hidden;
 	backface-visibility: hidden;
 	&.active{
-		-webkit-transform: translate3d(0,0,0px);
-		-moz-transform: translate3d(0,0,0px);
 		transform: translate3d(0,0,0px);
 	}
 }
@@ -258,8 +245,6 @@ a, a:visited{
 	position: absolute;
 	top:0;
 	left:0;
-	-webkit-transform: translate3d(0,0,-200px);
-	-moz-transform: translate3d(0,0,-200px);
 	transform: translate3d(0,0,-200px);
 }
 .landing-card-background{
@@ -270,8 +255,6 @@ a, a:visited{
 	height: 500px;
 	background: url(../img/build/card-bg.png) no-repeat center center;
 	background-size: contain;
-	-webkit-transform: translate3d(0,0,-25px);
-	-moz-transform: translate3d(0,0,-25px);
 	transform: translate3d(0,0,-25px);
 }
 .landing-card-content{
@@ -283,11 +266,7 @@ a, a:visited{
 	margin-left: -160px;
 	width: 340px;
 	height: 200px;
-	-webkit-transform: translate3d(0,0,0px);
-	-moz-transform: translate3d(0,0,0px);
 	transform: translate3d(0,0,0px);
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	h1{
 		color: #FFFFFF;
@@ -300,11 +279,7 @@ a, a:visited{
 		position: absolute;
 		top: -180px;
 		left: -130px;
-		-webkit-transform: translate3d(0,0,-10px);
-		-moz-transform: translate3d(0,0,-10px);
 		transform: translate3d(0,0,-10px);
-		-webkit-transform-style: preserve-3d;
-		-moz-transform-style: preserve-3d;
 		transform-style: preserve-3d;
 		&::before{
 			content:"";
@@ -312,8 +287,6 @@ a, a:visited{
 			height: 241px;
 			display: block;
 			position: absolute;
-			-webkit-transform: translate3d(-10px, 10px, -40px);
-			-moz-transform: translate3d(-10px, 10px, -40px);
 			transform: translate3d(-10px, 10px, -40px);
 			background: url(../img/build/logo-triangle.svg) no-repeat;
 			background-size: contain;
@@ -325,8 +298,6 @@ a, a:visited{
 		font-size: 3em;
 		font-weight: normal;
 		text-align: right;
-		-webkit-transform: translateZ(5px);
-		-moz-transform: translateZ(5px);
 		transform: translateZ(5px);
 	}
 	p{
@@ -347,16 +318,10 @@ a, a:visited{
 		background: #FFF;
 		color: #000000;
 		margin-bottom: 10px;
-	  -webkit-transition: -webkit-transform 100ms ease-out;
-	  -moz-transition: -moz-transform 100ms ease-out;
 	  transition: transform 100ms ease-out;
 	  text-decoration: none;
-		-webkit-transform: translateZ(0px);
-		-moz-transform: translateZ(0px);
 		transform: translateZ(0px);
 		&:hover{
-			-webkit-transform: translateZ(35px);
-			-moz-transform: translateZ(35px);
 			transform: translateZ(35px);
 		};
 		i{
@@ -376,6 +341,9 @@ a, a:visited{
 		margin: 0;
 		&::before{
 			margin-right: 10px;
+		}
+		i.fa{
+			margin-right: 5px;
 		}
 	}
 	h2{
@@ -430,7 +398,7 @@ a, a:visited{
 	}
 	.text{
 		padding: 0 10px 0 0;
-		-webkit-transform: rotateX(0deg) rotateY(21deg) translate3d(0px, 0px, 0px);
+		transform: rotateX(0deg) rotateY(4deg) translate3d(0px, 0px, 0px);
 		background: #FFFFFF;
 		> a{
 			display: block;
@@ -446,7 +414,7 @@ a, a:visited{
 		};
 	}
 	.image{
-		-webkit-transform: rotateX(0deg) rotateY(-21deg) translate3d(0px, 0px, 0px);
+		transform: rotateX(0deg) rotateY(-4deg) translate3d(0px, 0px, 0px);
 		display: block;
 		text-align: right;
 		padding: 15px 0 15px 15px;
@@ -530,6 +498,11 @@ a, a:visited{
 				display: none;
 			}
 		}
+	}
+}
+.footer__social{
+	&:not(:last-child){
+		margin-right: 5px;
 	}
 }
 .footer-like {

@@ -2,74 +2,29 @@
 // --------------------------
 
 @mixin fa-icon-rotate($degrees, $rotation) {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})";
-  -webkit-transform: rotate($degrees);
-      -ms-transform: rotate($degrees);
-          transform: rotate($degrees);
+  transform: rotate($degrees);
 }
 
 @mixin fa-icon-flip($horiz, $vert, $rotation) {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)";
-  -webkit-transform: scale($horiz, $vert);
-      -ms-transform: scale($horiz, $vert);
-          transform: scale($horiz, $vert);
+  transform: scale($horiz, $vert);
 }
 
-@-webkit-keyframes btnEnter {
+@keyframes btnEnter {
   0% {
-    -webkit-transform: rotateX(30deg) translate3d(0,200px,-300px);
+    transform: rotateX(30deg) translate3d(0,200px,-300px);
   }
   100% {
-    -webkit-transform: rotateX(0deg) translate3d(0,0px,0px);
+    transform: rotateX(0deg) translate3d(0,0px,0px);
   }
 }
-@-moz-keyframes btnEnter {
+@keyframes btnStar {
   0% {
-    -moz-transform: rotateX(30deg) translate3d(0,200px,-300px);
-  }
-  100% {
-    -moz-transform: rotateX(0deg) translate3d(0,0px,0px);
-  }
-}
-@-o-keyframes btnEnter {
-  0% {
-    -o-transform: rotateX(30deg) translate3d(0,200px,-300px);
-  }
-  100% {
-    -o-transform: rotateX(0deg) translate3d(0,0px,0px);
-  }
-}
-
-@-webkit-keyframes btnStar {
-  0% {
-    -webkit-transform: rotate(-1deg) skew(1deg) scale(0.99);
+    transform: rotate(-1deg) skew(1deg) scale(0.99);
   }
   50% {
-    -webkit-transform: rotate(0deg) skew(0deg) scale(1);
+    transform: rotate(0deg) skew(0deg) scale(1);
   }
   100% {
-    -webkit-transform: rotate(-1deg) skew(1deg) scale(0.99);
-  }
-}
-@-moz-keyframes btnStar {
-  0% {
-    -moz-transform: rotate(-1deg) skew(1deg) scale(0.99);
-  }
-  50% {
-    -moz-transform: rotate(0deg) skew(0deg) scale(1);
-  }
-  100% {
-    -moz-transform: rotate(-1deg) skew(1deg) scale(0.99);
-  }
-}
-@-o-keyframes btnStar {
-  0% {
-    -o-transform: rotate(-1deg) skew(1deg) scale(0.99);
-  }
-  50% {
-    -o-transform: rotate(0deg) skew(0deg) scale(1);
-  }
-  100% {
-    -o-transform: rotate(-1deg) skew(1deg) scale(0.99);
+    transform: rotate(-1deg) skew(1deg) scale(0.99);
   }
 }
