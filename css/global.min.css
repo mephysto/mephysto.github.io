@@ -1,23 +1,4 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
-@-webkit-keyframes btnEnter {
-  0% {
-    -webkit-transform: rotateX(30deg) translate3d(0, 200px, -300px);
-  }
-  100% {
-    -webkit-transform: rotateX(0deg) translate3d(0, 0px, 0px);
-  }
-}
-@-webkit-keyframes btnStar {
-  0% {
-    -webkit-transform: rotate(-1deg) skew(1deg) scale(0.99);
-  }
-  50% {
-    -webkit-transform: rotate(0deg) skew(0deg) scale(1);
-  }
-  100% {
-    -webkit-transform: rotate(-1deg) skew(1deg) scale(0.99);
-  }
-}
 html,
 button,
 input,
@@ -77,7 +58,6 @@ textarea {
 }
 body {
   font: 10px 'Droid Sans', sans-serif, Helvetica, Helvetica Neue, Arial;
-  -webkit-transform: translateZ(-200px);
   transform: translateZ(-200px);
 }
 h1,
@@ -119,9 +99,8 @@ h3 {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
+      transform: translate(0, 0);
 }
 /* makes the font 33% larger relative to the icon container */
 .fa-lg {
@@ -165,7 +144,7 @@ h3 {
 }
 .fa-border {
   padding: .2em .25em .15em;
-  border: solid 0.08em #eeeeee;
+  border: solid 0.08em #eee;
   border-radius: .1em;
 }
 .pull-right {
@@ -181,30 +160,16 @@ h3 {
   margin-left: .3em;
 }
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 .fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8);
-}
-@-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
 }
 @keyframes fa-spin {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
@@ -212,7 +177,6 @@ h3 {
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-  -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
@@ -220,7 +184,6 @@ h3 {
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -228,7 +191,6 @@ h3 {
   -moz-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
@@ -236,7 +198,6 @@ h3 {
   -moz-transform: scale(-1, 1);
   -o-transform: scale(-1, 1);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
-  -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
@@ -244,7 +205,6 @@ h3 {
   -moz-transform: scale(1, -1);
   -o-transform: scale(1, -1);
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
-  -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
 }
@@ -253,7 +213,6 @@ h3 {
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  -webkit-filter: none;
   filter: none;
 }
 .fa-stack {
@@ -278,7 +237,7 @@ h3 {
   font-size: 2em;
 }
 .fa-inverse {
-  color: #ffffff;
+  color: #fff;
 }
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
@@ -2018,9 +1977,7 @@ a:visited {
   -webkit-filter: url(#squiglyfilter);
 }
 .main-container {
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-perspective: 700px;
   /* Chrome, Safari, Opera  */
   /* Chrome, Safari, Opera  */
   perspective: 700px;
@@ -2033,9 +1990,7 @@ a:visited {
 }
 /* LANDING */
 .landing-card {
-  transition: -webkit-transform 1s ease-out;
   transition: transform 1s ease-out;
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   width: 700px;
   height: 500px;
@@ -2044,15 +1999,12 @@ a:visited {
   left: 50%;
   margin-left: -350px;
   margin-top: -250px;
-  -webkit-transform: translate3d(0, 0, 1000px);
   transform: translate3d(0, 0, 1000px);
-  -webkit-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .landing-card.active {
-  -webkit-transform: translate3d(0, 0, 0px);
   transform: translate3d(0, 0, 0px);
 }
 .landing-card-shadow {
@@ -2065,7 +2017,6 @@ a:visited {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform: translate3d(0, 0, -200px);
   transform: translate3d(0, 0, -200px);
 }
 .landing-card-background {
@@ -2076,7 +2027,6 @@ a:visited {
   height: 500px;
   background: url(../img/build/card-bg.png) no-repeat center center;
   background-size: contain;
-  -webkit-transform: translate3d(0, 0, -25px);
   transform: translate3d(0, 0, -25px);
 }
 .landing-card-content {
@@ -2088,9 +2038,7 @@ a:visited {
   margin-left: -160px;
   width: 340px;
   height: 200px;
-  -webkit-transform: translate3d(0, 0, 0px);
   transform: translate3d(0, 0, 0px);
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .landing-card-content h1 {
@@ -2104,9 +2052,7 @@ a:visited {
   position: absolute;
   top: -180px;
   left: -130px;
-  -webkit-transform: translate3d(0, 0, -10px);
   transform: translate3d(0, 0, -10px);
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .landing-card-content h1::before {
@@ -2115,7 +2061,6 @@ a:visited {
   height: 241px;
   display: block;
   position: absolute;
-  -webkit-transform: translate3d(-10px, 10px, -40px);
   transform: translate3d(-10px, 10px, -40px);
   background: url(../img/build/logo-triangle.svg) no-repeat;
   background-size: contain;
@@ -2126,7 +2071,6 @@ a:visited {
   font-size: 3em;
   font-weight: normal;
   text-align: right;
-  -webkit-transform: translateZ(5px);
   transform: translateZ(5px);
 }
 .landing-card-content p {
@@ -2146,14 +2090,11 @@ a:visited {
   background: #FFF;
   color: #000000;
   margin-bottom: 10px;
-  transition: -webkit-transform 100ms ease-out;
   transition: transform 100ms ease-out;
   text-decoration: none;
-  -webkit-transform: translateZ(0px);
   transform: translateZ(0px);
 }
 .landing-card-content a:hover {
-  -webkit-transform: translateZ(35px);
   transform: translateZ(35px);
 }
 .landing-card-content a i {
@@ -2202,7 +2143,6 @@ a:visited {
 .content-work section {
   border-top: 1px solid #444444;
   padding: 15px 0;
-  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 .content-work section.intro {
@@ -2360,9 +2300,7 @@ a:visited {
   top: 0;
   left: 0;
   transition: all 500ms;
-  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  -webkit-filter: url(../img/build/grayscale.svg#greyscale);
   filter: url(../img/build/grayscale.svg#greyscale);
   /* Firefox 4+ */
   filter: gray;
@@ -2374,7 +2312,6 @@ a:visited {
 }
 .content-resume .location img + img {
   opacity: 0;
-  -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
   -ms-filter: grayscale(0%);
   -o-filter: grayscale(0%);
@@ -2588,17 +2525,14 @@ p.client-description {
    ========================================================================== */
 @media only screen and (max-width: 640px) {
   body.home {
-    -webkit-perspective: 700px;
     /* Chrome, Safari, Opera  */
     /* Chrome, Safari, Opera  */
     perspective: 700px;
     /* Chrome, Safari, Opera  */
   }
   body.home .main-container {
-    -webkit-perspective: 700px;
     -ms-perspective: 700px;
     perspective: 700px;
-    -webkit-transform: translateZ(-500px);
     transform: translateZ(-500px);
   }
   .location {
