@@ -1,4 +1,5 @@
 
+
 /* RESUME */
 .content-resume{
 	background: #FFFFFF;
@@ -28,7 +29,7 @@
 		font-size: 1.5em;
 	}
 	p.name{
-		.HeadingFont;
+		@include HeadingFont;
 		text-align: center;
 		font-size: 3em;
 		padding: 0;

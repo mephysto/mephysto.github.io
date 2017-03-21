@@ -1,5 +1,6 @@
+/*! Mephysto */
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
-@import 'mixins.less';
+@import 'mixins';
 
 html,
 button,
@@ -63,22 +64,22 @@ textarea {
    ========================================================================== */
 // @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Arvo:400,700);
 
-.HeadingFont{
+@mixin HeadingFont{
 	font-family: 'Arvo', sans-serif, Helvetica, Helvetica Neue, Arial;
 	font-weight: 400;
 }
-.BodyFont{
+@mixin BodyFont{
 	font: 10px 'Droid Sans', sans-serif, Helvetica, Helvetica Neue, Arial;
 }
 
 body {
-	.BodyFont;
+	@include BodyFont;
 	-webkit-transform: translateZ( -200px );
 	-moz-transform: translateZ( -200px );
 	transform: translateZ( -200px );
 }
 h1, h2, h3{
-	.HeadingFont;
+	@include HeadingFont;
 }
 
 .wrapper {
@@ -104,8 +105,8 @@ h1, h2, h3{
    Author's custom styles
    ========================================================================== */
 
-@import "fontawesome/font-awesome.less";
-@import "angular-animations.less";
+@import "fontawesome/font-awesome";
+@import "angular-animations";
 
 *{
 	-moz-box-sizing: border-box;
@@ -388,7 +389,7 @@ a, a:visited{
 		font-size: 1.5em;
 	}
 	p.name{
-		.HeadingFont;
+		@include HeadingFont;
 		text-align: center;
 		font-size: 3em;
 		padding: 0;
@@ -496,7 +497,7 @@ a, a:visited{
 	}
 }
 
-@import "page-resume.less";
+@import "page-resume";
 
 .footer-container{
 	background: #000000;
@@ -572,7 +573,7 @@ a, a:visited{
 	}
 }
 
-@import "mediaqueries.less";
+@import "mediaqueries";
 
 /* ==========================================================================
    Helper classes

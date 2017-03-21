@@ -13,10 +13,11 @@ const gulp = require('gulp'),
   imagemin = require('gulp-imagemin');
 
 gulp.task('sass', function () {
-  gulp.src('scss/styles.scss')
+  gulp.src('scss/main.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer({browsers: ['last 2 versions', 'IE <= 10'], cascade: true }))
+    .pipe(rename("global.min.css"))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('css'));
 });

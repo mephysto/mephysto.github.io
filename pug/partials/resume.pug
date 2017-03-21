@@ -1,0 +1,118 @@
+.content-resume.wrapper.clearfix
+  .resumain
+    p.name
+      a(href='./') Maurice Melchers
+    p.title Front-end Web Developer
+    section.intro.clearfix
+      h1
+        span.fa.fa-th-list
+        |  Resume
+      .resume-picture(style="background-image:url('img/build/maurice-melchers-profile.jpg')")
+        img.hidden(src='img/build/maurice-melchers-profile.jpg', alt='Profile picture of Maurice Melchers')
+      ul.resume-overview
+        li
+          i.fa.fa-check
+          |  Front-end web developer with over 8 years of professional experience.
+        li
+          i.fa.fa-check
+          |  Primary focus on front-end web site development.
+        li
+          i.fa.fa-check
+          |  Experience in Interaction Design, UX, and Motion Graphics.
+    section.resume-skills
+      h2 Technical Expertise
+      ul
+        li
+          i.fa.fa-key
+          |  Design &dash; 
+          em Wireframing, Rapid Prototyping, Interaction Design, UX Design, Motion Design.
+        li
+          i.fa.fa-key
+          |  Front-End &dash; 
+          em
+            | Front-end:	HTML5, CSS3, SCSS/LESS, JavaScript, SEO, Accessibility, Responsive, Cross-browser compatibility, PHP.
+        li
+          i.fa.fa-key
+          |  Frameworks/API's &dash; 
+          em
+            | LESS, SCSS, Node.js, Grunt, jQuery, Angular, Backbone, Bootstrap, Google Maps, Facebook / Twitter.
+        li
+          i.fa.fa-key
+          |  Software &dash; 
+          em
+            | Photoshop, Illustrator, After Effects, Flash, Axure, Word, Excel, 
+            abbr(title='Subversion') SVN
+            | , Github, Silverstripe, Wordpress.
+        li
+          i.fa.fa-key
+          |  Other skills &dash; 
+          em
+            | Version Control (
+            abbr(title='Subversion') SVN
+            |  and GIT). Can work on either Mac or PC.
+    section.agencies
+      h2 Professional Experience
+      ul
+        li.client(ng-repeat='client in resume')
+          .location
+            img(src='http://maps.googleapis.com/maps/api/staticmap?center={{client.geo.x}},{{client.geo.y}}&markers={{client.geo.x}},{{client.geo.y}}&zoom=2&size=180x100&sensor=false')
+            img(src='http://maps.googleapis.com/maps/api/staticmap?center={{client.geo.x}},{{client.geo.y}}&markers={{client.geo.x}},{{client.geo.y}}&zoom=10&size=180x100&sensor=false')
+          h3.client-name
+            i.fa.fa-briefcase
+            a(href='{{client.link}}', target='_blank') {{client.title}}
+          p.client-description
+            i.fa.fa-wrench
+            span(ng-bind-html='client.description')
+          p.client-location
+            i.fa.fa-map-marker
+            span {{client.location}}
+          p.client-date
+            i.fa.fa-calendar
+            em {{client.date}}
+    section.education
+      h2 Education
+      ul
+        li
+          .location
+            img(src='http://maps.googleapis.com/maps/api/staticmap?center=51.918829,4.48849&markers=52.401329,4.89296&zoom=2&size=180x100&sensor=false')
+            img(src='http://maps.googleapis.com/maps/api/staticmap?center=51.918829,4.48849&markers=52.401329,4.89296&zoom=10&size=180x100&sensor=false')
+          h3.client-name
+            i.fa.fa-institution
+            | Hogeschool Rotterdam
+          p.client-description
+            i.fa.fa-graduation-cap
+            span
+              | Bachelor of Science, Communication & Multimedia Design
+              br
+              em
+                | Graduated with a Major in Communication & Multimedia Design, a Minor in Motion Graphics and a thesis on Augmented Reality.
+          p.client-location
+            i.fa.fa-map-marker
+            span Rotterdam, the Netherlands
+          p.client-date
+            i.fa.fa-calendar
+            em 2004 - 2009
+    section.references
+      h2 References
+      ul
+        li
+          p
+            | References available on 
+            a(href='mailto:contact@mauricemelchers.nl', target='_blank') request
+            | .
+    section.onlineprofiles
+      h2 Online Profiles
+      p
+        a(href='https://www.linkedin.com/in/mauricemelchers', target='_blank', title='view my Linkedin profile')
+          i.fa.fa-linkedin-square
+          | Linkedin
+        a(href='https://github.com/mephysto', target='_blank', title='view my Github profile')
+          i.fa.fa-github-square
+          | Github
+        a(href='https://twitter.com/mephysto', target='_blank', title='view my Twitter profile')
+          i.fa.fa-twitter-square
+          | Twitter
+        a(href='http://codepen.io/mephysto/', target='_blank', title='view my Codepen repository')
+          i.fa.fa-codepen
+          | Codepen
+// #main
