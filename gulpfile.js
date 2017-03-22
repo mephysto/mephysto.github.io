@@ -29,7 +29,7 @@ gulp.task('compress', function() {
     }))
     .pipe(uglify().on('error', gulpUtil.log))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('js'));
+    .pipe(gulp.dest('js/build'));
 });
 
 gulp.task('pug', function buildHTML() {

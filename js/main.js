@@ -1,5 +1,17 @@
 // Hello there. You checking out my code? You sexy beast.
 // contact me via: contact@mauricemelchers.nl
+const find = (query) => {
+  return document.querySelector(query);
+}
+
+const findAll = (query) => {
+  return document.querySelectorAll(query);
+}
+
+const findAllListed = (query) => {
+  return [].slice.call(findAll(query));
+}
+
 
 "use strict";
 const console = console || {};
@@ -16,18 +28,17 @@ const MEPHYSTO = MEPHYSTO || {
   vy: 0,
   ax: 0,
   ay: 0,
-  delay: 50,
   targetElement: {},
   sfx: {
-    soundPoolUrl: [
-      "sfx/squelch.mp3",
-      "sfx/guitar_wank.mp3",
-      "sfx/plugin.mp3",
-      "sfx/click.mp3",
-      "sfx/electric.mp3"
+    sounds: [
+      new Audio("sfx/squelch.mp3"),
+      new Audio("sfx/guitar_wank.mp3"),
+      new Audio("sfx/plugin.mp3"),
+      new Audio("sfx/click.mp3"),
+      new Audio("sfx/electric.mp3")
     ],
     getRandom: () => {
-      return new Audio(MEPHYSTO.sfx.soundPoolUrl[Math.floor(Math.random() * this.soundPoolUrl.length)]);
+      return MEPHYSTO.sfx.sounds[Math.floor(Math.random() * MEPHYSTO.sfx.sounds.length)];
     }
   },
   init: () => {
@@ -39,84 +50,36 @@ const MEPHYSTO = MEPHYSTO || {
     if (MEPHYSTO.checkState('landing')) {
       // if browser doesn't support devicemotion evnts use mouse location instead. Firefox somehow supports it but is being a butt about it.
       MEPHYSTO.targetElement = document.getElementById('maincard');
-      $(".main-container").mousemove(MEPHYSTO.throttle(MEPHYSTO.onMouseMove, MEPHYSTO.delay));
+      document.body.addEventListener('mousemove', MEPHYSTO.onMouseMove);
     };
     /* Button hover sound effect */
-    $('.btnLightning').mouseenter(function () { MEPHYSTO.sfx.getRandom().play() });
+    findAllListed('.btnLightning').map((el) => {
+      el.addEventListener('mouseenter', () => {
+        MEPHYSTO.sfx.getRandom().play()
+      });
+    })
   },
   // check if we're on landing page
-  checkState: function (name) {
-    if ($('body').hasClass('state-' + name)) {
+  checkState: (name) => {
+    if (document.body.classList.contains('state-' + name)) {
       return true;
     }
   },
   // calculate tilting of landing card based on cursor location
-  onMouseMove: function (e) {
+  onMouseMove: (ev) => {
     MEPHYSTO.sw = window.innerWidth * 0.5;
     MEPHYSTO.sh = window.innerHeight * 0.5;
-    MEPHYSTO.mx = e.clientX;
-    MEPHYSTO.my = e.clientY;
+    MEPHYSTO.mx = ev.clientX;
+    MEPHYSTO.my = ev.clientY;
 
     MEPHYSTO.ox = Math.floor((MEPHYSTO.sw - MEPHYSTO.mx) / MEPHYSTO.sw * 100) / -100;
     MEPHYSTO.oy = Math.floor((MEPHYSTO.sh - MEPHYSTO.my) / MEPHYSTO.sh * 100) / 100;
-
     MEPHYSTO.tiltLandingCard(MEPHYSTO.oy * 15, MEPHYSTO.ox * 20);
   },
-  // calculate tilting of landing card based on device tiltage
-  onDeviceMotion: function (e) {
-
-    // MEPHYSTO.ax = e.beta;
-    // MEPHYSTO.ay = e.gamma;
-    MEPHYSTO.ax = e.accelerationIncludingGravity.x;
-    MEPHYSTO.ay = e.accelerationIncludingGravity.y;
-    // NYI: we're not using velocity yet
-    // MEPHYSTO.vy = MEPHYSTO.vy + -(MEPHYSTO.ay);
-    // MEPHYSTO.vx = MEPHYSTO.vx + MEPHYSTO.ax;
-    MEPHYSTO.x = parseInt(MEPHYSTO.ay * .5);
-    MEPHYSTO.y = parseInt(MEPHYSTO.ax * .10);
-    MEPHYSTO.tiltLandingCard(MEPHYSTO.x, MEPHYSTO.y);
-  },
   // tilt the landing card
-  tiltLandingCard: function (_x, _y) {
-    MEPHYSTO.targetElement.style.webkitTransform = "rotateX(" + _x + "deg) rotateY(" + _y + "deg) translate3d(0,0,0px)"
-    MEPHYSTO.targetElement.style.MozTransform = "rotateX(" + _x + "deg) rotateY(" + _y + "deg) translate3d(0,0,0px)"
-  },
-  // wait till events are done triggering before updating with callback
-  debouncer: function (func, wait, immediate) {
-    var timeout;
-    return function () {
-      var context = this, args = arguments;
-      clearTimeout(timeout);
-      timeout = setTimeout(function () {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      }, wait);
-      if (immediate && !timeout) func.apply(context, args);
-    };
-  },
-
-  // limit the amount of calls being triggered per second
-  throttle: function (fn, threshhold, scope) {
-    threshhold || (threshhold = 250);
-    var last,
-      deferTimer;
-    return function () {
-      var context = scope || this;
-
-      var now = +new Date,
-        args = arguments;
-      if (last && now < last + threshhold) {
-        // hold on to it
-        clearTimeout(deferTimer);
-        deferTimer = setTimeout(function () {
-          last = now;
-          fn.apply(context, args);
-        }, threshhold);
-      } else {
-        last = now;
-        fn.apply(context, args);
-      }
-    };
+  tiltLandingCard: (_x, _y) => {
+    MEPHYSTO.targetElement.style.MozTransform = `rotateX(${_x}deg) rotateY(${_y}deg) translate3d(0,0,0px)`;
+    MEPHYSTO.targetElement.style.transform = `rotateX(${_x}deg) rotateY(${_y}deg) translate3d(0,0,0px)`;
   }
 };
 
