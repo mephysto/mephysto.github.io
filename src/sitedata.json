@@ -1,0 +1,175 @@
+{
+  "resume": {
+    "id": "resume",
+    "companies": [{
+        "title": "Red Tiki",
+        "link": "http://www.redtiki.com.au",
+        "location": "Perth, Australia",
+        "geo": {
+          "x": -31.9419322,
+          "y": 115.8334663
+        },
+        "date": "February 2015 – Current",
+        "description": "A quirky little web design studio in Perth, Australia. I got brought on board to help out with their front-end projects. The prefered weapon of managing content was Silverstripe, which was surprisingly easy to pick up. A pretty laid back agency with its own Tikibar and the best Friday afternoon cocktail hours."
+      },
+      {
+        "title": "Lululemon Athletica",
+        "link": "http://www.lululemon.com",
+        "location": "Vancouver, Canada",
+        "geo": {
+          "x": 49.2714618,
+          "y": -123.146587
+        },
+        "date": "September 2014 – November 2014",
+        "description": "Lululemon athletica is a yoga-inspired athletic apperal company, with stores worldwide. For this project I was brought in to work on a digital magazine. The HTML/CSS/JS were made so it would fit in their custom templating system."
+      },
+      {
+        "title": "FCV Interactive",
+        "link": "http://www.fcv.ca/",
+        "location": "Vancouver, Canada",
+        "geo": {
+          "x": 49.2852102,
+          "y": -123.1123021
+        },
+        "date": "June 2014",
+        "description": "Got brought on board to work on maintenance work on British Columbia tourism sites. These were HTML/CSS/JS updates and some bugfixes on Kentico templates. Mentionable technologies used: Grunt.js to test, compile, and build the site."
+      },
+      {
+        "title": "Longtail",
+        "link": "http://www.longtail.com.au/",
+        "location": "Perth, Australia",
+        "geo": {
+          "x": -31.949973,
+          "y": 115.844871
+        },
+        "date": "February 2013 – April 2014",
+        "description": "Worked as a Front End Web Developer doing CSS, HTML and JavaScript. While at the same time keeping up to date with trending technologies. Making sure every site is responsive, accessible and up to date with modern standards."
+      },
+      {
+        "title": "Heyday",
+        "link": "http://heyday.co.nz/",
+        "location": "Wellington, New Zealand",
+        "geo": {
+          "x": -41.299249,
+          "y": 174.781942
+        },
+        "date": "October 2012",
+        "description": "Got asked to be part of the team to realize a webshop and experience site for a local warehouse as a Front-End Web Developer. I did HTML, CSS & JavaScript."
+      },
+      {
+        "title": "BKA Interactive",
+        "link": "http://www.bka.co.nz/",
+        "location": "Wellington, New Zealand",
+        "geo": {
+          "x": -36.863947,
+          "y": 174.747265
+        },
+        "date": "June 2012 - August 2012",
+        "description": "Realized and maintained various sites as a Front-End Web Developer. I did HTML, CSS & JavaScript."
+      },
+      {
+        "title": "World Vision",
+        "link": "https://www.worldvision.org.nz/",
+        "location": "Auckland, New Zealand",
+        "geo": {
+          "x": -36.92103,
+          "y": 174.820847
+        },
+        "date": "April 2012 - June 2012",
+        "description": "Helped out with various sites as a Front-End Web Developer. I did HTML, CSS &amp; JavaScript. Also did some Back-End to couple with their CMS Umbraco."
+      },
+      {
+        "title": "Colenso BBDO",
+        "link": "http://www.colensobbdo.co.nz/",
+        "location": "Auckland, New Zealand",
+        "geo": {
+          "x": -36.84755,
+          "y": 174.744668
+        },
+        "date": "October 2012",
+        "description": "Helped out with various sites as a Front-End Web Developer. I did HTML, CSS &amp; JavaScript. Also created some newsletters using online services."
+      },
+      {
+        "title": "IN10 Communications",
+        "link": "http://www.in10.nl/",
+        "location": "Rotterdam, the Netherlands",
+        "geo": {
+          "x": 51.902566,
+          "y": 4.459224
+        },
+        "date": "June 2008 – January 2012",
+        "description": "Here I developed web projects using techniques such as CSS3, HTML5, PHP, Papervision3D, Sandy, Away3D, FLARToolkit, AJAX but generally Actionscript 3.0. And also the occasional Motion Graphics work using After Effects.<br>I also completed a 5 month internship during which I researched how Augmented Reality could be used as a new digital medium in marketing campaigns."
+      },
+      {
+        "title": "MTV Networks",
+        "link": "http://www.mtv.nl",
+        "location": "Amsterdam, the Netherlands",
+        "geo": {
+          "x": 52.401329,
+          "y": 4.89296
+        },
+        "date": "September 2007 – January 2008",
+        "description": "During my 5 months internship I researched Interaction Design. Day to day activity included making flash banners, news letters and short running campaign sites for international brands like MTV, Comedy Central and Nickelodeon."
+      }
+    ]
+  },
+  "work": {
+    "id": "work",
+    "clients": [{
+        "title": "Lululemon - Digital Magazine",
+        "shortdescription": "Lululemon are the premium active wear brand for yoga enthusiasts and runners, all over the world. I helped them engage with their audience via an animated online magazine.",
+        "longdescription": [
+          "To promote a new season of fitness attire, lululemon wanted to have a unique online user experience. The brief was to build an online lifestyle magazine to engage with consumers, via interviews from their brand ambassadors and with a showcase of new season merchandise.",
+          "I developed this online magazine autonomously. The development itself had to be compatible with a pre-existing template system, which presented limitations to coding capacities. I engineered solutions around these limitations, and the end result delivered intricate animation for desktop, with support for mobile devices; this was achieved through use of HTML, CSS and javascript in a local Node.js environment.",
+          "The magazine was live between November 2014 and January 2015."
+        ],
+        "externalLink": "https://www.lululemon.com/",
+        "externalLinkName": "lululemon.com",
+        "image": "img/build/work-lululemon.jpg"
+      },
+      {
+        "title": "ECU Life Lessons",
+        "shortdescription": "Edith Cowan University (ECU), based in Western Australia, faces major student recruitment cycles every year and runs campaigns, tailored to a range of demographics, to attract new student applications. I helped build a versatile landing page that offered them much-needed flexibility to carry the development into their future campaigns.",
+        "longdescription": [
+          "In collaboration with team members from <a href=\"http://www.longtail.com.au/\" target=\"_blank\" title=\"a full service digital agency\">Longtail</a>, I developed a digital framework that could 'hang' in future sites for ECU, offering them much-needed flexibility to expand this project into future campaigns. Life Lessons was the first campaign to be implemented into this new system.",
+          "I took active part in concepting, interactive design, and front-end development for this project."
+        ],
+        "externalLink": "https://www.ecu.edu.au/degrees/overview",
+        "externalLinkName": "www.ecu.edu.au/degrees/overview",
+        "image": "img/build/eculife.jpg"
+      },
+      {
+        "title": "HBF Amaze",
+        "shortdescription": "HBF Health Insurance, based in Western Australia, bases itself on the principles around health and wellbeing for everyone - in short, everyone should be reaching their full potential and living an amazing life.  In collaboration with team members from <a href=\"http://www.longtail.com.au/\" target=\"_blank\" title=\"a full service digital agency\">Longtail</a>, I helped built the world's first Facebook ‘AMAZE’ app.",
+        "longdescription": [
+          "When a user connects to Facebook through the app, an alogrithm reviewed a range of data like the number of tagged photos, likes, friends, events, check-ins, even the frequency of certain key words. The app then generated a personalised 'Amaze' score, alongside a host of cool animation, which users could then share with their friends and compete with one another to see who was, in fact, the most 'Amaze' person amongst their social circle.",
+          "I took active part in concepting, Interaction Design, and front-end development for this project."
+        ],
+        "externalLink": "http://www.youramaze.com.au/",
+        "externalLinkName": "www.youramaze.com.au",
+        "image": "img/build/hbfamaze.jpg"
+      },
+      {
+        "title": "ECU Hits",
+        "shortdescription": "ECU had a goal to increase engagement with online prospective and current students. So, <a href=\"http://www.longtail.com.au/\" target=\"_blank\" title=\"a full service digital agency\">Longtail</a> created ECU Hits, an underground radio station powered by its users.  Any student, future or current, could discover, listen, and share their ultimate playlist themed around an ECU study area; e.g. a user's Top 50 Metal Songs' could be submitted under the faculty of Engineering.",
+        "longdescription": [
+          "A competition was run through this platform, whereby users could submit their playlists to be in the running to win prizes.  We utilised technology from Spotify to enable this functionality.",
+          "I took active part in concepting, Interaction Design, and front-end development for this project."
+        ],
+        "externalLink": "http://www.ecuhits.com.au/",
+        "externalLinkName": "www.ecuhits.com.au",
+        "image": "img/build/ecu-hits.jpg"
+      },
+      {
+        "title": "Kingspark Naturescape",
+        "shortdescription": "Rio Tinto Naturescape Kings Park is a public park in the middle of Perth, Australia. This part of the park is dedicate for children to be educated about the environment. The major challenge of this project was to create a accessible overview of the park while still maintaining an exciting user experience.",
+        "longdescription": "",
+        "externalLink": "http://naturescape.dev.longtailportfolio.com",
+        "externalLinkName": "Naturescape",
+        "image": "img/build/naturescape.jpg"
+      }
+    ]
+
+
+  }
+}
