@@ -1,21 +1,21 @@
+"use strict";
 // Hello there. You checking out my code? You sexy beast.
 // contact me via: contact@mauricemelchers.nl
 const find = (query) => {
+  "use strict";
   return document.querySelector(query);
 }
 
 const findAll = (query) => {
+  "use strict";
   return document.querySelectorAll(query);
 }
 
 const findAllListed = (query) => {
+  "use strict";
   return [].slice.call(findAll(query));
 }
-
-
-"use strict";
-const console = console || {};
-const MEPHYSTO = MEPHYSTO || {
+const MEPHYSTO = {
   sw: 0,
   sh: 0,
   mx: 0,
