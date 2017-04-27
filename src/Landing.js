@@ -4,7 +4,14 @@ class Landing extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      maincard: document.getElementById('maincard')
+      maincard: document.getElementById('maincard'),
+      sfx: [
+        new Audio("sfx/squelch.mp3"),
+        new Audio("sfx/guitar_wank.mp3"),
+        new Audio("sfx/plugin.mp3"),
+        new Audio("sfx/click.mp3"),
+        new Audio("sfx/electric.mp3")
+      ]
     };
     const orientation = {
       sw: 0,
@@ -14,6 +21,8 @@ class Landing extends Component {
       ox: 0,
       oy: 0
     };
+
+    this.menuHoverHandler = this.menuHoverHandler.bind(this);
     document.body.onmousemove = (ev) => {
       orientation.sw = window.innerWidth * 0.5;
       orientation.sh = window.innerHeight * 0.5;
@@ -22,7 +31,22 @@ class Landing extends Component {
       orientation.ox = ((orientation.sw - orientation.mx) / orientation.sw).toFixed(2);
       orientation.oy = ((orientation.sh - orientation.my) / orientation.sh).toFixed(2);
       this.tiltLandingCard(orientation.oy * 15, orientation.ox * 20);
+    };
+  }
+  getRandom(soundPool) {
+    return soundPool[Math.floor(Math.random() * soundPool.length)];
+  }
+  menuHoverHandler() {
+    // console.log(this.getRandom(this.state.sfx));
+    var playPromise = this.getRandom(this.state.sfx).play();
+    if (playPromise !== undefined) {
+      playPromise.then(function() {
+        // console.log('Automatic playback started!')
+      }).catch(function(error) {
+        // console.log('// Automatic playback failed.')
+      });
     }
+    
   }
   tiltLandingCard(x, y) {
     document.getElementById('maincard').style.webkitTransform = "rotateX(" + x + "deg) rotateY(" + y + "deg) translate3d(0,0,0px)"
@@ -38,9 +62,9 @@ class Landing extends Component {
             <h1>Mephysto</h1>
             <h2>Maurice Melchers</h2>
             <p>	Front End Web Developer.<br />
-              <a href="/work" className="btnLightning"><i className="fa fa-briefcase"></i>Work</a>
-              <a href="/resume" className="btnLightning"><i className="fa fa-th-list"></i>Resume</a>
-              <a href="mailto:contact@mauricemelchers.nl" target="_blank" className="btnLightning"><i className="fa fa-envelope"></i>Contact me</a>
+              <a href="/work" className="btnLightning" onMouseOver={this.menuHoverHandler}><i className="fa fa-briefcase"></i>Work</a>
+              <a href="/resume" className="btnLightning" onMouseOver={this.menuHoverHandler}><i className="fa fa-th-list"></i>Resume</a>
+              <a href="mailto:contact@mauricemelchers.nl" target="_blank" className="btnLightning" onMouseOver={this.menuHoverHandler}><i className="fa fa-envelope"></i>Contact me</a>
             </p>
           </div>
         </div>
