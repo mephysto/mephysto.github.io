@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 
 class FooterSocialItem extends Component {
-  // init function
   constructor(props) {
-    // call Component, pass props
     super(props);
-    // set state
     this.state = {title: 'Title'}
   }
   render() {
