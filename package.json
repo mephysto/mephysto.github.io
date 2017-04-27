@@ -7,6 +7,13 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-util": "^3.0.8",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-scripts": "0.9.5"
