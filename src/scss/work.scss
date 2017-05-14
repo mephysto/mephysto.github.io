@@ -1,0 +1,121 @@
+@import 'mixins';
+
+/* WORK */
+
+.content-work{
+  padding: 10px 30px 50px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  @include mdShadowLevel(1);
+  section{
+    border-top: 1px solid #444444;
+    padding: 60px 0 40px;
+    transform-style: preserve-3d;
+    &.intro{
+      border: none;
+      p {
+        font-size: 1.8em;
+      }
+    }
+    ul{
+      padding: 0 0 0 1.75em;
+      margin: 0.5em 0 0 0;
+      > li{
+        font-size: 1.25em;
+        line-height: 1.5em;
+        em{
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+  h1{
+    font-size: 4em;
+    margin: 0;
+    &::before{
+      margin-right: 10px;
+    }
+    i.fa{
+      margin-right: 0.5em;
+    }
+  }
+  h2{
+    margin: 10px 0 20px 0;
+    font-size: 3em;
+  }
+  h3{
+    font-size: 1.5em;
+  }
+  p{
+    font-size: 1.6em;
+  }
+  .text{
+    padding-bottom: 20px;
+    background: #FFFFFF;
+    text-align: center;
+    a, a:visited, a:active{
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    };
+  }
+  .image{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin-left: auto;
+    margin-right: auto;
+    // max-height: 200px;
+    img{
+      // width: 100%;
+      // max-width: 300px;
+      max-width: 100%;
+      height: auto;
+      visibility: hidden;
+    }
+    @media only screen and (min-width: 640px) {
+      min-width: 400px;
+      max-width: 50%;
+    }
+  }
+  .moreprojects {
+    padding-bottom: 0;
+    a{
+      color: #333;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      };
+    }
+  }
+}
+
+.work-more-info{
+  display: none;
+  padding-left: 1em;
+  span{
+    font-size: 1.25em;
+    font-style: italic;
+    /* text-align: right; */
+    display: block;
+    text-decoration: underline;
+  }
+  p{
+    // display: none;
+    font-size: 1.25em;
+  }
+  span {
+    display: none;
+  }
+  &:hover{
+    span{
+      // display: none;
+    }
+    p{
+      display: block;
+    }
+  }
+}

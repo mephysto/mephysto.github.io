@@ -1,0 +1,34 @@
+body, html{
+  height: 100%;
+  width: 100%;
+}
+.content-landing{
+  perspective: 800px;
+  min-height: 100vh;
+}
+#particle-container{
+  > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@import "landing-card";
+
+.btnLightning:hover:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -105px;
+  left: -95px;
+  width: 520px;
+  height: 245px;
+  z-index: 9999;
+  background: url('../img/build/btn-star.png') no-repeat;
+  pointer-events: none;
+  animation: btnStar 150ms infinite ease;
+  filter: url(#squiglyfilter);
+}

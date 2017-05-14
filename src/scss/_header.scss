@@ -12,19 +12,18 @@
     position: relative;
     width: 100%;
     margin: 0;
-    box-shadow: 0 0 15px 5px rgba(0,0,0,0.25);
+    @include mdShadowLevel(1);
     h1{
       margin: 0;
-      color: #FFFFFF;
-      background: url(../img/build/logo-mid.png) no-repeat;
+      padding-left: 35px;
       background: url(../img/build/logo.svg) no-repeat;
       background-size: contain;
-      width: 30px;
+      // width: 30px;
       height: 30px;
-      text-indent: -999em;
       position: absolute;
       top: 4px;
       left: 4px;
+      font-size: 1.4em;
     }
   }
   nav{
@@ -54,35 +53,39 @@
       &, &:hover, &:visited{
         color: #333333;
       }
+      &:hover{
+        text-decoration: underline;
+      }
       i{
         margin-right: 2px;
         color: #000000
-      }
-      i + span{
-        display: none;
       }
     }
     ul{
       display: flex;
     }
   }
-  @media only screen and (min-width: 480px) {
+  @media only screen and (max-width: 480px) {
 
-    nav ul li {
-      // display: inline;
+    nav{
+      a{
+        font-size: 2em;
+        margin: 0;
+        width: 1.8em;
+        height: 1.4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      span{
+        display: none;
+      }
     }
   }
 
   @media only screen and (min-width: 768px) {
     .header-container{
       display: block;
-    }
-    nav {
-      // float: right;
-      // width: 38%;
-      a{
-        // float: right;
-      }
     }
   }
 }

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 class HeaderItem extends Component {
   // init function
@@ -10,7 +11,12 @@ class HeaderItem extends Component {
   }
   render() {
     return (
-      <li><a href={this.props.link}><i className={"fa " + this.props.icon}></i>{this.props.title}</a></li>
+      <li>
+        <Link to={this.props.link} title={this.props.title}>
+          <i className={"fa " + this.props.icon}></i>
+          <span>{this.props.title}</span>
+        </Link>
+      </li>
     );
   }
 }

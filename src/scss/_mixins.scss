@@ -1,5 +1,20 @@
 // Mixins
 // --------------------------
+@mixin mdShadowLevel($level) {
+  @if ($level == 5) {
+    box-shadow: 0px 40px 70px 0px rgba(0, 0, 0, 0.22),0px 27px 24px 0px rgba(0, 0, 0, 0.2);
+  } @else if ($level == 4){
+    box-shadow: 0px 25px 55px 0px rgba(0, 0, 0, 0.21),0px 16px 28px 0px rgba(0, 0, 0, 0.22);
+  } @else if ($level == 3){
+    box-shadow: 0px 17px 50px 0px rgba(0, 0, 0, 0.19),0px 12px 15px 0px rgba(0, 0, 0, 0.24);
+  } @else if ($level == 2){
+    box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.19),0px 8px 17px 0px rgba(0, 0, 0, 0.2);
+  }  @else if ($level == 1){
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.16),0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+  } @else{ // Aka Level 0:
+    box-shadow: none;
+  } 
+}
 
 @mixin fa-icon-rotate($degrees, $rotation) {
   transform: rotate($degrees);
@@ -28,3 +43,60 @@
     transform: rotate(-1deg) skew(1deg) scale(0.99);
   }
 }
+@keyframes hero-shake {
+  0%, 100% {
+    transform: skew(-45deg) translate(-3px, 2px);
+  }
+  50% {
+    transform: skew(-45deg) translate(-2px, 3px);
+  }
+}
+
+@mixin HeadingFont{
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+@mixin BodyFont{
+  font: 10px 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+
+/* All Hail Mike Riethmuller
+  http://codepen.io/MadeByMike/pen/VvwqvW?editors=0100
+ */
+
+// Fluid Type Mixin
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+/**
+ * Fluid Type Mixin
+ * 
+ * @param {px/em/rem} [$min-vw] lowest viewport width to adjust text size on
+ * @param {px/em/rem} [$max-vw] highest viewport width to adjust text size on
+ * @param {px/em/rem} [$min-font-size] minimum fontsize
+ * @param {px/em/rem} [$max-font-size] maximum fontsize
+ */
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  } @else {
+    @error "Detected mixed units. Please use the same units for all parameters. " + $u1 +", " + $u2 + ", " + $u3 +", "+ $u4;
+  }
+}
+

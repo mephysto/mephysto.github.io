@@ -1,0 +1,243 @@
+@import 'mixins';
+
+/* RESUME */
+.content-resume{
+  padding: 10px 30px 50px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  @include mdShadowLevel(1);
+  h1{
+    font-size: 3em;
+    margin: 0;
+    display: block;
+    &::before{
+      margin-right: 10px;
+    }
+  }
+  h2{
+    border-top: 1px solid #444444;
+    padding-top: 15px;
+    margin: 10px 0 0 0;
+    font-size: 2em;
+  }
+  h3{
+    font-size: 1.5em;
+  }
+  p{
+    font-size: 1.5em;
+  }
+  p.name{
+    @include HeadingFont;
+    text-align: center;
+    font-size: 3em;
+    padding: 0;
+    text-transform: uppercase;
+    margin: 30px 0 0 0;
+  }
+  p.title{
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 0;
+    padding: 0 0 10px 0;
+    color: #444;
+    border-bottom: 2px solid #222222;
+  }
+  a.download{
+    position: relative;
+    color: #444444;
+    text-decoration: none;
+    background: #aaa;
+    float: right;
+    padding: 4px 8px;
+    border-radius: 10px;
+    &:hover{
+      color: #222222;
+    };
+    &:active{
+      top:1px;
+      left:1px;
+    };
+    .fa{
+      text-decoration: underline;
+    }
+  }
+  .location{
+    width: 180px;
+    height: 100px;
+    margin: 0 0 10px 10px;
+    position: relative;
+    img{
+      display: block;
+      width: 180px;
+      height: 100px;
+      border: 1px solid #ccc;
+      filter: grayscale(100%);
+      &:first-child{
+
+      }
+      &:last-child{
+        opacity: 0;
+        filter:none;
+        position: absolute;
+        top:0;
+        left:0;
+        transition: 500ms ease-out;
+      }
+    }
+    &:hover img + img{
+      opacity: 1;
+    };
+  }
+  section.intro, section.resume-skills, section.education, section.references{
+    ul{
+      padding: 0;
+      list-style: none;
+      margin: 0.5em 0 0 0;
+      > li{
+        em{
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+  section.intro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    h1{
+      flex: 1 1 100%;
+    }
+  }
+  section.agencies{
+    > ul{
+      padding: 0;
+      > li{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 15px;
+        padding: 0 0 15px 10px;
+        border-bottom: 1px solid #aaa;
+        min-height: 200px;
+        &:last-child{
+          border-bottom: none;
+        }
+        > ul{
+          list-style: none;
+          padding: 0;
+          margin: 0.5em 0 0 0;
+          > li{
+            font-family: 'Fontawesome';
+            font-size: 1.25em;
+            line-height: 1.5em;
+            &:before{
+              margin-right: 0.25em;
+            }
+            em{
+              font-size: 0.9em;
+            }
+          }
+        }
+
+      }
+    }
+    .fa{
+      &::before{
+        margin-right: 0.25em;
+      }
+    }
+  }
+  section.onlineprofiles{
+    a{
+      line-height: 2em;
+      text-decoration: none;
+      background: #EEE;
+      border-radius: 90px;
+      padding: 0px 10px;
+      display: inline-block;
+      margin-right: 5px;
+      transition: background 500ms ease-out;
+
+      &:hover{
+        background: #bbb;
+      }
+      i{
+        margin-right: 4px;
+      }
+    }
+
+  }
+}
+.agencies, .education, .references{
+  h3{
+    margin: 0 0 5px 0;
+  }
+  p{
+    margin: 0 0 0 1.5em;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    em{
+      font-size: 0.9em;
+    }
+  }
+  ul{
+    list-style: none;
+    .fa{
+      &:before{
+        margin-right: 0.25em;
+      }
+    }
+  }
+}
+.client-name{
+  display: block;
+}
+.client-location{
+  &::before{
+    margin-left: 0.25em;
+  }
+}
+.client-date{
+
+}
+p.client-description{
+  display: block;
+  min-width: 300px;
+  max-width: 66.6%;
+  margin: 5px 0 10px 1.5em;
+}
+.resume-picture{
+  background: center 33.3% no-repeat;
+  background-size: cover;
+  width: 33.3%;
+  max-height: 250px;
+  height: 250px;
+  border: 3px solid black;
+  border-radius: 1px;
+  img{
+    width: 100%;
+  }
+}
+.resume-overview{
+  width: 66.6%;
+  li{
+    font-size: 1.75em;
+    // margin-left: 1em;
+    margin: 4px 1em;
+    line-height: 1.15em;
+    &.fa::before{
+      margin-left: -1.5em;
+      margin-right: 0.5em;
+    }
+  }
+}
+.resume-skills{
+  li{
+    font-size: 1.25em;
+    line-height: 1.5em;
+    &::before{
+      margin-right: 0.25em;
+    }
+  }
+}
