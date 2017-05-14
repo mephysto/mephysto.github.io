@@ -16,7 +16,7 @@ var MEPHYSTO = MEPHYSTO || {
 	vy : 0,
 	ax : 0,
 	ay : 0,
-	delay : 500,
+	delay : 50,
 	targetElement : {},
 	sfx : {
 		soundPoolUrl : [
@@ -31,21 +31,15 @@ var MEPHYSTO = MEPHYSTO || {
     }
 	},
 	init : function(){
-		console.info('%c Hi there! Looking to check out my unminified source files? Have a look around my Github page on https://github.com/mephysto/mephysto.github.io\n Any other questions or maybe even job offers? Mail me at contact@mauricemelchers.nl ;)', 'background: #bada55; color: #222'); 
+		console.info('%cHi there! Looking to check out my unminified source files? Have a look around my Github page on https://github.com/mephysto/mephysto.github.io\n Any other questions or opportunities? Send me a mail me at contact@mauricemelchers.nl ;)', 'background: #bada55; color: #222');
 
 		/* Move the card on the landing page on mouse move / device tilt */
 
 		// TODO: Update these listeners when moving back to landingpage, after visitor starts the sesh on any other page
 		if(MEPHYSTO.checkState('landing')){
 			// if browser doesn't support devicemotion evnts use mouse location instead. Firefox somehow supports it but is being a butt about it.
-	    if (window.DeviceMotionEvent !== undefined && (navigator.userAgent.search("Firefox") >= 0) === false) {
-	    	// register device motions
-	    	MEPHYSTO.targetElement = document.getElementById('maincard');
-				window.ondevicemotion = MEPHYSTO.throttle(MEPHYSTO.onDeviceMotion, MEPHYSTO.delay);
-	    } else{
-	    	// we can't, use mousemove instead
-				$( ".main-container" ).mousemove(MEPHYSTO.throttle(MEPHYSTO.onMouseMove, MEPHYSTO.delay));
-	    }
+	    MEPHYSTO.targetElement = document.getElementById('maincard');
+			$( ".main-container" ).mousemove(MEPHYSTO.throttle(MEPHYSTO.onMouseMove, MEPHYSTO.delay));
 		};
 		/* Button hover sound effect */
     $('.btnLightning').mouseenter(function(){MEPHYSTO.sfx.getRandom().play()});
@@ -70,13 +64,16 @@ var MEPHYSTO = MEPHYSTO || {
 	},
 	// calculate tilting of landing card based on device tiltage
 	onDeviceMotion : function(e){
+
+		// MEPHYSTO.ax = e.beta;
+		// MEPHYSTO.ay = e.gamma;
 		MEPHYSTO.ax = e.accelerationIncludingGravity.x;
 		MEPHYSTO.ay = e.accelerationIncludingGravity.y;
 		// NYI: we're not using velocity yet
 		// MEPHYSTO.vy = MEPHYSTO.vy + -(MEPHYSTO.ay);
 		// MEPHYSTO.vx = MEPHYSTO.vx + MEPHYSTO.ax;
-		MEPHYSTO.x = parseInt(MEPHYSTO.ay * 5);
-		MEPHYSTO.y = parseInt(MEPHYSTO.ax * 10);
+		MEPHYSTO.x = parseInt(MEPHYSTO.ay * .5);
+		MEPHYSTO.y = parseInt(MEPHYSTO.ax * .10);
 		MEPHYSTO.tiltLandingCard(MEPHYSTO.x, MEPHYSTO.y);
 	},
 	// tilt the landing card
