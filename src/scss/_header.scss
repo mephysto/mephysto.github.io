@@ -16,7 +16,7 @@
     h1{
       margin: 0;
       padding-left: 35px;
-      background: url(../img/build/logo.svg) no-repeat;
+      background: url(../img/logo.svg) no-repeat;
       background-size: contain;
       // width: 30px;
       height: 30px;
@@ -39,15 +39,19 @@
       list-style: none;
     }
     a {
-      display: block;
-      margin: 7px 10px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: 0;
       padding: 0;
-      width: auto;
+      width: 1.8em;
+      height: 1.4em;
 
       text-align: center;
       text-decoration: none;
       line-height: 1em;
-      font-size: 1.3em;
+      font-size: 2em;
       text-transform: uppercase;
 
       &, &:hover, &:visited{
@@ -61,28 +65,26 @@
         color: #000000
       }
     }
+    span{
+      display: none;
+    }
     ul{
       display: flex;
     }
-  }
-  @media only screen and (max-width: 480px) {
-
-    nav{
+    @media only screen and (min-width: 480px) {
       a{
-        font-size: 2em;
-        margin: 0;
-        width: 1.8em;
-        height: 1.4em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;      
+        font-size: 1.3em;
+        margin: 7px 10px 5px;
+        width: auto;
+        height: auto;
       }
       span{
-        display: none;
+        display: inline-block;
       }
     }
-  }
 
+  }
   @media only screen and (min-width: 768px) {
     .header-container{
       display: block;

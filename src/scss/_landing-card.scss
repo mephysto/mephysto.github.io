@@ -19,7 +19,7 @@
   content: "";
   width: 700px;
   height: 500px;
-  background: url(../img/build/card-shadow.png) no-repeat center center;
+  background: url(../img/card-shadow.png) no-repeat center center;
   background-size: contain;
   display: block;
   position: absolute;
@@ -33,7 +33,7 @@
   left:0;
   width: 700px;
   height: 500px;
-  background: url(../img/build/card-bg.png) no-repeat center center;
+  background: url(../img/card-bg.png) no-repeat center center;
   background-size: contain;
   transform: translate3d(0,0,-25px);
 }
@@ -50,8 +50,8 @@
   transform-style: preserve-3d;
   h1{
     color: #FFFFFF;
-    background: url(../img/build/logo-mid.png) no-repeat;
-    background: url(../img/build/logo-no-bg.svg) no-repeat;
+    background: url(../img/logo-mid.png) no-repeat;
+    background: url(../img/logo-no-bg.svg) no-repeat;
     background-size: contain;
     width: 250px;
     height: 241px;
@@ -68,7 +68,7 @@
       display: block;
       position: absolute;
       transform: translate3d(-10px, 10px, -40px);
-      background: url(../img/build/logo-triangle.svg) no-repeat;
+      background: url(../img/logo-triangle.svg) no-repeat;
       background-size: contain;
     };
   }

@@ -62,6 +62,7 @@
     }
   }
   .location{
+    display: none;
     width: 180px;
     height: 100px;
     margin: 0 0 10px 10px;
@@ -87,86 +88,95 @@
     &:hover img + img{
       opacity: 1;
     };
-  }
-  section.intro, section.resume-skills, section.education, section.references{
-    ul{
-      padding: 0;
-      list-style: none;
-      margin: 0.5em 0 0 0;
-      > li{
-        em{
-          font-size: 0.9em;
-        }
-      }
+    @media only screen and (min-width: 640px) {
+      display: block;
     }
   }
-  section.intro{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-content: flex-start;
-    h1{
-      flex: 1 1 100%;
-    }
-  }
-  section.agencies{
-    > ul{
-      padding: 0;
-      > li{
-        display: flex;
-        justify-content: space-between;
-        margin: 0 0 15px;
-        padding: 0 0 15px 10px;
-        border-bottom: 1px solid #aaa;
-        min-height: 200px;
-        &:last-child{
-          border-bottom: none;
-        }
-        > ul{
-          list-style: none;
-          padding: 0;
-          margin: 0.5em 0 0 0;
-          > li{
-            font-family: 'Fontawesome';
-            font-size: 1.25em;
-            line-height: 1.5em;
-            &:before{
-              margin-right: 0.25em;
-            }
-            em{
-              font-size: 0.9em;
-            }
+  section{
+    padding: 60px 0 40px;
+    &.intro,
+    &.resume-skills,
+    &.education,
+    &.references{
+      ul{
+        padding: 0;
+        list-style: none;
+        margin: 0.5em 0 0 0;
+        > li{
+          em{
+            font-size: 0.9em;
           }
         }
-
       }
     }
-    .fa{
-      &::before{
-        margin-right: 0.25em;
+    &.intro{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-content: flex-start;
+      h1{
+        flex: 1 1 100%;
       }
     }
-  }
-  section.onlineprofiles{
-    a{
-      line-height: 2em;
-      text-decoration: none;
-      background: #EEE;
-      border-radius: 90px;
-      padding: 0px 10px;
-      display: inline-block;
-      margin-right: 5px;
-      transition: background 500ms ease-out;
+    &.agencies{
+      > ul{
+        padding: 0;
+        > li{
+          display: flex;
+          justify-content: space-between;
+          margin: 0 0 15px;
+          padding: 0 0 15px 10px;
+          border-bottom: 1px solid #aaa;
+          min-height: 200px;
+          &:last-child{
+            border-bottom: none;
+          }
+          > ul{
+            list-style: none;
+            padding: 0;
+            margin: 0.5em 0 0 0;
+            > li{
+              font-family: 'Fontawesome';
+              font-size: 1.25em;
+              line-height: 1.5em;
+              &:before{
+                margin-right: 0.25em;
+              }
+              em{
+                font-size: 0.9em;
+              }
+            }
+          }
 
-      &:hover{
-        background: #bbb;
+        }
       }
-      i{
-        margin-right: 4px;
+      .fa{
+        &::before{
+          margin-right: 0.25em;
+        }
       }
     }
+    &.onlineprofiles{
+      a{
+        line-height: 2em;
+        text-decoration: none;
+        background: #EEE;
+        border-radius: 90px;
+        padding: 0px 10px;
+        display: inline-block;
+        margin-right: 5px;
+        transition: background 500ms ease-out;
 
+        &:hover{
+          background: #bbb;
+        }
+        i{
+          margin-right: 4px;
+        }
+      }
+
+    }
   }
 }
 .agencies, .education, .references{
@@ -234,7 +244,7 @@ p.client-description{
 }
 .resume-skills{
   li{
-    font-size: 1.25em;
+    font-size: 1.5em;
     line-height: 1.5em;
     &::before{
       margin-right: 0.25em;

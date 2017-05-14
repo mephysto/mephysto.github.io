@@ -1,7 +1,5 @@
 @import 'mixins';
 
-/* WORK */
-
 .content-work{
   padding: 10px 30px 50px;
   background: #FFFFFF;
@@ -60,6 +58,9 @@
     a:hover{
       text-decoration: underline;
     };
+    @media only screen and (min-width: 768px) {
+      margin: 0 10% 10px;
+    }
   }
   .image{
     display: block;
@@ -89,33 +90,6 @@
       &:hover{
         text-decoration: underline;
       };
-    }
-  }
-}
-
-.work-more-info{
-  display: none;
-  padding-left: 1em;
-  span{
-    font-size: 1.25em;
-    font-style: italic;
-    /* text-align: right; */
-    display: block;
-    text-decoration: underline;
-  }
-  p{
-    // display: none;
-    font-size: 1.25em;
-  }
-  span {
-    display: none;
-  }
-  &:hover{
-    span{
-      // display: none;
-    }
-    p{
-      display: block;
     }
   }
 }

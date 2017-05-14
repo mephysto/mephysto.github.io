@@ -21,7 +21,41 @@ html {
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
+
+body {
+  @include BodyFont;
+  // background: #ad0000 url(../img/build/grid.gif);
+  // background: #ad0000;
+  background: #ad0000;
+  font-size: 10px;
+}
+
+* {
+  box-sizing:inherit;
+  &:before,
+  &:after {
+    box-sizing:inherit;
+  }
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+  @media only screen and (min-width: 1140px) {
+    width: 1026px;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3{
+  @include HeadingFont;
+}
+
+a, a:visited{
+  color:inherit;
+};
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -31,15 +65,6 @@ html {
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
 }
 
 audio,
@@ -59,47 +84,14 @@ textarea {
   resize: vertical;
 }
 
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
 @import url('https://fonts.googleapis.com/css?family=Roboto|Montserrat:400,700');
 @import "fontawesome/font-awesome";
-
-body {
-  @include BodyFont;
-}
-h1, h2, h3{
-  @include HeadingFont;
-}
-
-.wrapper {
-  width: 90%;
-  margin: 0 5%;
-}
-
-html{
-  box-sizing: border-box;
-}
-* {
-  box-sizing:inherit;
-  &:before,
-  &:after {
-    box-sizing:inherit;
-  }
-}
-body{
-  background: #ad0000 url(../img/build/grid.gif);
-  background: #ad0000;
-  font-size: 10px;
-}
-a, a:visited{
-  color:inherit;
-};
-
 @import "header";
 @import "footer";
-@import "mediaqueries";
 
+.main-container{
+  // background-color: #ad0000;
+}
 
 .hero{
   max-height: 100vw;
@@ -109,6 +101,7 @@ a, a:visited{
   background-color: purple;
   background-position: 50% 50%;
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,23 +133,6 @@ a, a:visited{
     color: transparent;
     position: relative;
     transform: skew(45deg);
-    &:hover{
-      span:before{
-        transform: skew(-45deg) translate(0px, -2px);
-      }
-      span:first-child{
-        &:after{
-          transform: skew(-45deg) translate(-2px, 2px);
-          animation: hero-shake 150ms infinite ease;
-        }
-      }
-      span:last-child{
-        &:after{
-          transform: skew(-45deg) translate(2px, 2px);
-          animation: hero-shake 150ms infinite ease;
-        }
-      }
-    }
     span{
       position: absolute;
       top: 0;
@@ -197,6 +173,7 @@ a, a:visited{
         top: 0;
         left: 0;
         content: attr(data-text);
+        text-shadow: 1px 2px 1px rgba(#000, 0.33);
         transform: skew(-45deg);
       }
       &:before{
@@ -207,9 +184,23 @@ a, a:visited{
         z-index: 100;
       }
     }
-
-
-    
+    &:hover{
+      span:before{
+        transform: skew(-45deg) translate(0px, -2px);
+      }
+      span:first-child{
+        &:after{
+          transform: skew(-45deg) translate(-2px, 2px);
+          animation: hero-shake 150ms infinite ease;
+        }
+      }
+      span:last-child{
+        &:after{
+          transform: skew(-45deg) translate(2px, 2px);
+          animation: hero-shake 150ms infinite ease;
+        }
+      }
+    }    
   }
   p{
     margin: 0;

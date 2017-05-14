@@ -23,8 +23,6 @@ class Resume extends Component {
             <span data-text="Resume">Resume</span>
             <span data-text="Resume">Resume</span>
           </h2>
-          {/*<p className="name"><a href="./">Maurice Melchers</a></p>*/}
-          {/*<p className="title">Front-end Web Developer</p>*/}
         </div>
         <div className="content-resume wrapper">
           <div className="resumain">
@@ -32,8 +30,8 @@ class Resume extends Component {
               <h1><span className="fa fa-th-list"></span> Resume</h1>
               <ul className="resume-overview">
                 <li><i className="fa fa-check"></i> Front-end web developer with over 8 years of professional experience.</li>
-                <li><i className="fa fa-check"></i> React, Angular, Node.js development</li>
-                <li><i className="fa fa-check"></i> UI / UX design, Motion Graphics.</li>
+                <li><i className="fa fa-check"></i> React, Angular, Node.js developer.</li>
+                <li><i className="fa fa-check"></i> UI/UX design, Web Motion Grapher.</li>
               </ul>
               <div className="resume-picture" style={{ backgroundImage: 'url(' + profileImage + ')' }}>
                 <img className="hidden" src={profileImage} alt="Profile of Maurice Melchers" />
