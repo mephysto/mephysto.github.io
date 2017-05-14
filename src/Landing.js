@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Particles from 'react-particles-js';
 
@@ -171,8 +172,12 @@ class Landing extends Component {
             <h1>Mephysto</h1>
             <h2>Maurice Melchers</h2>
             <p>	Front End Web Developer.<br />
-              <a href="/work" className="btnLightning" onMouseOver={this.menuHoverHandler}><i className="fa fa-briefcase"></i>Work</a>
-              <a href="/resume" className="btnLightning" onMouseOver={this.menuHoverHandler}><i className="fa fa-th-list"></i>Resume</a>
+              <Link to="/work" title="Check out my work" className="btnLightning" onMouseOver={this.menuHoverHandler}>
+                <i className="fa fa-briefcase"></i>Work
+              </Link>
+              <Link to="/resume" title="Check out my resume" className="btnLightning" onMouseOver={this.menuHoverHandler}>
+                <i className="fa fa-th-list"></i>Resume
+              </Link>
               <a href="mailto:contact@mauricemelchers.nl" target="_blank" className="btnLightning" onMouseOver={this.menuHoverHandler}><i className="fa fa-envelope"></i>Contact me</a>
             </p>
           </div>
