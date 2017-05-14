@@ -2,6 +2,7 @@
   "name": "hello-world",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://mephysto.github.io",
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
