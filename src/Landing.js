@@ -171,7 +171,7 @@ class Landing extends Component {
           <div className="landing-card-content">
             <h1>Mephysto</h1>
             <h2>Maurice Melchers</h2>
-            <p>	Front End Web Developer.<br />
+            <p>	Front End Web Designer.<br />
               <Link to="/work" title="Check out my work" className="btnLightning" onMouseOver={this.menuHoverHandler}>
                 <i className="fa fa-briefcase"></i>Work
               </Link>

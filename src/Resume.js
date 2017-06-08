@@ -29,9 +29,9 @@ class Resume extends Component {
             <section className="intro clearfix">
               <h1><span className="fa fa-th-list"></span> Resume</h1>
               <ul className="resume-overview">
-                <li><i className="fa fa-check"></i> Front-end web developer with over 8 years of professional experience.</li>
+                <li><i className="fa fa-check"></i> Front-end web designer with over 8 years of professional experience.</li>
+                <li><i className="fa fa-check"></i> Web Design, UI/UX design, Web Motion Grapher.</li>
                 <li><i className="fa fa-check"></i> React, Angular, Node.js developer.</li>
-                <li><i className="fa fa-check"></i> UI/UX design, Web Motion Grapher.</li>
               </ul>
               <div className="resume-picture" style={{ backgroundImage: 'url(' + profileImage + ')' }}>
                 <img className="hidden" src={profileImage} alt="Profile of Maurice Melchers" />
@@ -40,10 +40,10 @@ class Resume extends Component {
             <section className="resume-skills">
               <h2>Technical Expertise</h2>
               <ul>
+                <li><i className="fa fa-key"></i> Design ‐ <em>Design for web, Wireframing, Rapid Prototyping, UI/UX Design, animation for web.</em></li>
                 <li><i className="fa fa-key"></i> Front-End ‐ <em>Front-end:	HTML5, CSS, JavaScript, SEO, Accessibility, Responsive, Cross-browser.</em></li>
-                <li><i className="fa fa-key"></i> Design ‐ <em>Wireframing, Rapid Prototyping, UI/UX Design, animation for web.</em></li>
                 <li><i className="fa fa-key"></i> Dev Ops ‐ <em>Amazon AWS, LESS, SCSS, Node.js, Grunt, Gulp, Git, Angular, React, Google Maps, Facebook / Twitter Data.</em></li>
-                <li><i className="fa fa-key"></i> Software ‐ <em>Photoshop, Illustrator, After Effects, Axure, Silverstripe, Wordpress.</em></li>
+                <li><i className="fa fa-key"></i> Software ‐ <em>Sketch, Photoshop, Illustrator, After Effects, Axure, Silverstripe, Wordpress.</em></li>
                 <li><i className="fa fa-key"></i> Other skills ‐ <em>Version Control. Proficient on both Mac and PC.</em></li>
               </ul>
             </section>

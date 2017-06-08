@@ -13,6 +13,7 @@
       border: none;
       p {
         font-size: 1.8em;
+        line-height: 1.5;
       }
     }
     ul{
@@ -30,11 +31,13 @@
   h1{
     font-size: 4em;
     margin: 0;
+    text-shadow: 1px 1px 0px #fff, 2px 2px 0px #333;
     &::before{
       margin-right: 10px;
     }
     i.fa{
       margin-right: 0.5em;
+      text-shadow: none;
     }
   }
   h2{
@@ -51,6 +54,9 @@
     padding-bottom: 20px;
     background: #FFFFFF;
     text-align: center;
+    a{
+      text-shadow: 1px 1px 0px #fff, 2px 2px 0px #333;
+    }
     a, a:visited, a:active{
       color: #333;
       text-decoration: none;
@@ -90,6 +96,28 @@
       &:hover{
         text-decoration: underline;
       };
+    }
+  }
+  @media only screen and (min-width: 640px) {
+    overflow: hidden;
+    section:not(.moreprojects){
+      &:before,
+      &::after{
+        background-color: #000;
+        position: absolute;
+        bottom: -21px;
+        display: block;
+        content: "";
+        width: 40px;
+        height: 40px;
+        transform: translate(0,-0.5px) rotate(-45deg);
+      }
+      &:before{
+        left: -50px;
+      }
+      &::after{
+        right: -50px;
+      }
     }
   }
 }

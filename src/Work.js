@@ -17,9 +17,7 @@ const Work = (props) => {
         <div className="workmain">
           <section className="intro">
             <h1><i className="fa fa-briefcase"></i>Work</h1>
-            <p>My specialty is Front-End web development. I enjoy developing aesthetic and functional websites, in line with approved designs. I also enjoy building prototypes for new concepts as an interactive designer, and work towards achieving optimal responsive design, accessibility, usability, and performance for all of my projects.</p>
-            <p>Though I am most prolific on the technical side of a project, I have also participated in ideation with the creative department. Personally I believe that a front end developer has a more holistic role in web projects. Much like how a Creative Director ensures an idea doesn't deviate from its original conception to deployment. So should I be guiding the creatives what works and what doesn't.</p>
-            <p>Here is a small selection some of my work.</p>
+            <p>My code is fast, responsive, and compliant. It adheres to web standards and is accessible. I’ve worked in Silverstripe, Squarespace, Wordpress, and some random bespoke ones. I’ve worked in React, Angular, and Bootstrap. I know how to Webpack, until they update the heckin’ thing again. I’m fluent in the arts of web animation, Canvas, TweenMax. Oh, and sometimes I do a Hackathon for the NASA.</p>
           </section>
 
           <WorkList items={sitedata.work.clients} />
